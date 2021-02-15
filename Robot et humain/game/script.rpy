@@ -4,6 +4,7 @@
 # name of the character.
 
 define n = Character("Narrateur", kind = nvl)
+define c = Character("Choix")
 define r = Character("F4-112R")
 define h = Character("Athénaïs ")
 define m = Character("S1-25C")
@@ -39,10 +40,25 @@ label start:
 
     r "Ouah zebi un humain ... Qu'est ce que je fait avec ça ????"
 
+    define menu = menu
+
+    menu:
+
+        c "Que faire de l'humain ?"
 
 
 
+        "Coup de botte.":
 
+            nvl clear
+
+            r "Voila qui est fait"
+
+        "Receuillir":
+
+            nvl clear
+
+            r "Bon bah je supose que je vais m'en occuper"
 
 
     # This ends the game.

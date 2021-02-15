@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 20: end of line expected.
-    scene bg dzedz.jpg
-                  ^
+File "game/script.rpy", line 48: expected menuitem
+    nvl clear
+    ^
 
 Ren'Py Version: Ren'Py 7.4.2.1292
-Mon Feb 15 13:36:32 2021
+Mon Feb 15 14:41:25 2021
