@@ -34,6 +34,8 @@ label start:
 
     n "Athenais se fait dégage de la cité et attérit en bas"
 
+    play sound "tumbleweed-sound-effect-hq.mp3"
+
     scene bg villedestroy
 
     show robot normal
@@ -46,12 +48,16 @@ label start:
 
         c "Que faire de l'humain ?"
 
-
-
         "Coup de botte.":
+            play sound "coup-de-botte.mp3"
+            show pow at center
 
             nvl clear
 
+
+            scene bg villedestroy
+
+            show robot normal
             r "Voila qui est fait"
 
         "Receuillir":
