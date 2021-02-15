@@ -1,0 +1,22 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/script.rpy", line 30, in script
+    e "Année 3100"
+Exception: Sayer 'e' is not defined.
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/script.rpy", line 30, in script
+    e "Année 3100"
+  File "renpy/ast.py", line 680, in execute
+    who = eval_who(self.who, self.who_fast)
+  File "renpy/ast.py", line 574, in eval_who
+    raise Exception("Sayer '%s' is not defined." % who)
+Exception: Sayer 'e' is not defined.
+
+Windows-10-10.0.18362
+Ren'Py 7.4.2.1292
+Robot et humain 1.0
+Mon Feb 15 11:43:43 2021

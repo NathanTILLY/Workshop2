@@ -3,7 +3,10 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define e = Character("Eileen")
+define n = Character("Narrateur", kind = nvl)
+define r = Character("F4-112R")
+define h = Character("Athénaïs ")
+define m = Character("S1-25C")
 
 
 # The game starts here.
@@ -14,19 +17,33 @@ label start:
     # add a file (named either "bg room.png" or "bg room.jpg") to the
     # images directory to show it.
 
-    scene bg room
+    scene bg ville
 
     # This shows a character sprite. A placeholder is used, but you can
     # replace it by adding a file named "eileen happy.png" to the images
     # directory.
 
-    show eileen happy
+
 
     # These display lines of dialogue.
 
-    e "You've created a new Ren'Py game."
+    n "Année 3100"
 
-    e "Once you add a story, pictures, and music, you can release it to the world!"
+    n "Elkjaer, dernier bastion de l'humanité"
+
+    n "Athenais se fait dégage de la cité et attérit en bas"
+
+    scene bg villedestroy
+
+    show robot normal
+
+    r "Ouah zebi un humain ... Qu'est ce que je fait avec ça ????"
+
+
+
+
+
+
 
     # This ends the game.
 
