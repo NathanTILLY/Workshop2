@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 138: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation.
-    return
-    ^
+The label timerUno is defined twice, at
+  File "game/timer.rpyc", line 1 and
+  File "game/timerUno.rpy", line 1.
 
 Ren'Py Version: Ren'Py 7.4.2.1292
-Tue Feb 16 10:34:42 2021
+Tue Feb 16 15:45:43 2021
