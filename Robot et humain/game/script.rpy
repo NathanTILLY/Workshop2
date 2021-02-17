@@ -1,19 +1,42 @@
-﻿# The script of the game goes in this file.
+﻿# PERMETTANT DE REALISER UN TIMER
 
-# Declare characters used by this game. The color argument colorizes the
-# name of the character.
+default timeout = 5.0
+
+default timeout_label = None
+
+default persistent.timed_choices = True
+
+screen choice(items):
+    style_prefix "choice"
+
+    vbox:
+        for i in items:
+            textbutton i.caption action i.action
+
+    if (timeout_label is not None) and persistent.timed_choices:
+
+        bar:
+            xalign 0.5
+            ypos 400
+            xsize 740
+            value AnimatedValue(old_value=0.0, value=1.0, range=1.0, delay=timeout)
+
+        timer timeout action Jump(timeout_label)
+
+# DEFINITION DE PERSONNAGES
 
 define n = Character("Narrateur", kind = nvl)
 define c = Character("Choix")
-define r = Character("F4-112R")
-define a = Character("Athénaïs ")
-define m = Character("S1-25C")
-define p = Character("P6-4D")
+define r = Character("F4-112R", color = "#464CBD")
+define a = Character("Athénaïs", color = "#B361C9")
+define ath = Character("Fillette", color = "#B361C9")
+define m = Character("S1-25C", color = "#B0413E")
+define p = Character("P6-4D", color = "#588A66")
 
-
-# The game starts here.
 
 label start:
+
+    jump rencontre
 
     # Show a background. This uses a placeholder by default, but you can
     # add a file (named either "bg room.png" or "bg room.jpg") to the
