@@ -34,7 +34,8 @@ label timerUno:
             menu:
                 "cylindrique":
                     r "un boulon cylindrique ?"
-                    d "jure un boulon hexagonale ? ça marche"
+                    d "jure un boulon cylindrique ? ça marche"
+                    jump sbChemin2
                 "hexagonale":
                     r "un boulon hexagonale ?"
                     d "niet je vais te croquer toi"
@@ -59,4 +60,4 @@ label timerUno:
                         "Courir":
                             r " Huf huf"
                             r " t'arrete pas de courir Athenais"
-                            jump fin3
+                            jump soldatEmbusquer

@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/timerUno.rpy", line 40: Menu does not contain any choices.
-    menu:
-         ^
+File "game/bras.rpy", line 10: end of line expected.
+    r "let's go on avance"*
+                          ^
 
 Ren'Py Version: Ren'Py 7.4.2.1292
-Wed Feb 17 09:57:56 2021
+Wed Feb 17 17:04:09 2021

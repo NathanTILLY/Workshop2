@@ -1,7 +1,40 @@
-﻿# The script of the game goes in this file.
+﻿python:
+    flag = True
+# Règle le timer sur un certain nombre de secondes. Peut-être modifié avec en plein milieu du code avec $timeout = 10.0 par exemple
+default timeout = 5.0
 
-# Declare characters used by this game. The color argument colorizes the
-# name of the character.
+# timeout_label renvoie au label vers lequel le joueur sera redirigé en cas de temps écoulé.
+# pour y assigner un label, écrivez $timeout_label = "start" par exemple
+# ne pas oublier de remettre le timeout_label à None pour ne pas que les futurs choix soient aussi timés.
+#Prenez en note qu'un nom de label doit être entre guillemets, mais pas None.
+default timeout_label = None
+
+default persistent.timed_choices = True
+
+screen choice(items):
+    style_prefix "choice"
+
+    vbox:
+        for i in items:
+            textbutton i.caption action i.action
+
+    if (timeout_label is not None) and persistent.timed_choices:
+
+        bar:
+            xalign 0.5
+            ypos 400
+            xsize 740
+            value AnimatedValue(old_value=0.0, value=1.0, range=1.0, delay=timeout)
+
+        timer timeout action Jump(timeout_label)
+
+
+# Tout ça est à coller, de préférence au tout début du code.
+# Pour que votre choix sois timé, attribuez juste avant à votre timeout_label une valeur autre que None
+
+
+
+
 
 define n = Character("Narrateur", kind = nvl)
 define c = Character("Choix")
@@ -11,23 +44,11 @@ define m = Character("S1-25C")
 define p = Character("P6-4D")
 
 
-# The game starts here.
-
 label start:
-
-    # Show a background. This uses a placeholder by default, but you can
-    # add a file (named either "bg room.png" or "bg room.jpg") to the
-    # images directory to show it.
 
     scene bg ville
 
-    # This shows a character sprite. A placeholder is used, but you can
-    # replace it by adding a file named "eileen happy.png" to the images
-    # directory.
 
-
-
-    # These display lines of dialogue.
 
     n "Année 3100"
 
@@ -136,7 +157,7 @@ label start:
     r "Salut mec tu nous laisse passer stp ?"
 
     p "Que venez vous faire ici ?"
-
+    $ pasDeBras = False
     menu:
         "Dire la vérité":
             r "Je souhaite passer afin de ramener cette enfant chez elle"
@@ -151,6 +172,7 @@ label start:
                     jump avecbras
 
                 "je l'ai trouvé":
+                    $ pasDeBras = True
                     r "je l'ai trouvé dans une benne pas loin"
                     p "..."
                     p "tu te paie ma tronche gringo ???"
@@ -165,13 +187,14 @@ label start:
                     hide robotdoaunier
 
                     show bg white
-                    with Dissolve(2)
+                    with Dissolve(1)
 
                     pause .5
 
                     r "Argh"
 
                     show bg porte
+                    with Dissolve(1)
 
                     show athenais at right
 
@@ -198,7 +221,8 @@ label start:
             p "et c'est qui votre employeur ?"
             menu:
                 "réponse fun":
-                    r "J34n C45tuX"
+                    $ pasDeBras = True
+                    r "J34n C45t3X"
                     p "..."
                     p "tu te paie ma tronche gringo ???"
                     p "A toutes les unités ici P6-4D en charge de la porte 45B renégat repéré envoyer des renforts"
@@ -212,13 +236,14 @@ label start:
                     hide robotdoaunier
 
                     show bg white
-                    with Dissolve(2)
+                    with Dissolve(1)
 
                     pause .5
 
                     r "Argh"
 
                     show bg porte
+                    with Dissolve(1)
 
                     show athenais at right
 
@@ -244,6 +269,7 @@ label start:
                     jump avecbras
 
         "Passer en force":
+            $ pasDeBras = True
             r "Frérot t'a déjà entendu parler de l"
             r "DERRIERE TOI !!!"
             p "mmmmh?"
@@ -256,13 +282,14 @@ label start:
             hide robotdoaunier
 
             show bg white
-            with Dissolve(2)
+            with Dissolve(1)
 
             pause .5
 
             r "Argh"
 
             show bg porte
+            with Dissolve(1)
 
             show athenais at right
 
@@ -279,9 +306,9 @@ label start:
 
             p "..."
             p "A toutes les unités le renégat se dirige vers la cité des humains"
-
+            hide robotdouanier
             jump sansbras
 
-    # This ends the game.
+
 
     return

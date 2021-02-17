@@ -1,32 +1,22 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "renpy/common/00start.rpy", line 187, in script
-    python:
-  File "renpy/common/00start.rpy", line 188, in <module>
-    renpy.execute_default_statement(True)
-  File "game/timerUno.rpy", line 4, in set_default
-    default timeout = 5.0
-Exception: store.timeout is being given a default a second time.
+  File "game/cable.rpy", line 17, in script
+    g " eh vous deux comment vous êtes arriver là ?!!"
+Exception: Sayer 'g' is not defined.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "renpy/common/00start.rpy", line 187, in script
-    python:
-  File "renpy/ast.py", line 922, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "renpy/python.py", line 2218, in py_exec_bytecode
-    exec(bytecode, globals, locals)
-  File "renpy/common/00start.rpy", line 188, in <module>
-    renpy.execute_default_statement(True)
-  File "renpy/exports.py", line 3581, in execute_default_statement
-    i.set_default(start)
-  File "game/timerUno.rpy", line 4, in set_default
-    default timeout = 5.0
-Exception: store.timeout is being given a default a second time.
+  File "game/cable.rpy", line 17, in script
+    g " eh vous deux comment vous êtes arriver là ?!!"
+  File "renpy/ast.py", line 680, in execute
+    who = eval_who(self.who, self.who_fast)
+  File "renpy/ast.py", line 574, in eval_who
+    raise Exception("Sayer '%s' is not defined." % who)
+Exception: Sayer 'g' is not defined.
 
 Windows-10-10.0.18362
 Ren'Py 7.4.2.1292
 Robot et humain 1.0
-Wed Feb 17 09:34:40 2021
+Wed Feb 17 17:05:34 2021
