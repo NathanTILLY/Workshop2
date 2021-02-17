@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/bras.rpy", line 10: end of line expected.
-    r "let's go on avance"*
-                          ^
+The label cachette is defined twice, at
+  File "game/cachette.rpy", line 1 and
+  File "game/label_01rencontre.rpy", line 149.
 
 Ren'Py Version: Ren'Py 7.4.2.1292
-Wed Feb 17 17:04:09 2021
+Wed Feb 17 17:52:50 2021
