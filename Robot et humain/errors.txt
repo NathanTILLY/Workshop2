@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/label_01rencontre.rpy", line 171: choice menuitem expects a non-empty block.
-    "*Courir vers la porte.*":
-                              ^
+File "game/label_01rencontre.rpy", line 200: expected 'simple_expression' not found.
+    xalign = 0.75
+           ^
 
 Ren'Py Version: Ren'Py 7.4.2.1292
-Wed Feb 17 11:53:19 2021
+Wed Feb 17 13:55:26 2021

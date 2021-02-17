@@ -97,7 +97,7 @@ label rencontre:
 
     "*F4 s’arrête avec Athénaïs.*"
 
-    show robotbad at center
+    show robotbad neutre at center
 
     show athenais peur
 
@@ -111,7 +111,11 @@ label rencontre:
 
     "*F4 protège Athénaïs avec son corps.*"
 
+    show robotbad colere1
+
     m   "Veuillez retourner à la centrale pour effectuer une maintenance et remettez-nous l’enfant. Dernier avertissement avant désactivation."
+
+    show robotbad2 neutre at left
 
     "*Un autre officier mécanique interpelle votre assaillant, vous avez une dizaine de secondes devant vous.* "
 
@@ -125,13 +129,15 @@ label rencontre:
 
             "*F4 et Athénaïs commencent à courir en direction de la porte*"
 
+            show robotbad colere2
+
             m   "HALTE ! A toutes les unités disponibles, le F4 est en fuite, il a un humain avec lui !"
 
             "*Commence à courir après F4 et Athénaïs.*"
 
             r   "Vite... cours... Athénaïs..."
 
-            "*Athénaïs court aussi vite qu’elle puisse, mais commence à être essoufflée*"
+            "*Athénaïs court de mieux possible, mais commence à être essoufflée.*"
 
             jump cachette
 
@@ -142,15 +148,25 @@ label rencontre:
 
 label cachette:
 
+    hide robotbad
+
+    hide robotbad2
+
+    show robot at left
+
     r   "Cache toi... ici..."
 
     "*F4 Montre la direction d’une épave de voiture.*"
+
+    hide athenais
 
     "*Il la place sous l’épave puis se glisse au milieu des débris de robots.*"
 
     "*Quelques minutes plus tard, après avoir semé les gardes, F4 retourne chercher Athénaïs.*"
 
     r    "Ca... va... petite ?"
+
+    show athenais neutre
 
     a   "Oui, merci de m'avoir aidée."
 
@@ -170,11 +186,32 @@ label cachette:
 
         "*Courir vers la porte.*":
 
-            "bla"
+            r   "Cours... Toujours tout droit...Et ne t'arrête... Pas."
+
+            "*Athénaïs passe la porte suivie par F4.*"
+
+            show douane neutre at left
+
+            show douane2 neutre at right
+
+            hide athenais
+
+            hide robot
+
+            p   " Je crois qu’ils viennent de passer la porte."
+
+            p   "Ah ! Je pensais que tu ne les avais pas vus..."
+
+            "*Les P6-4D lancent une alarme qui alerte les S1 à proximité.*"
+
 
         "*Mentir aux douaniers.*":
 
-            "bla"
+            p   "Veuillez vous identifier."
+
+            r   "Je suis l’unité F4... Numéro 112... de la brigade des récupérateurs..."
+
+            p   "Que faites vous ici ?”"
 
 
 
@@ -182,8 +219,9 @@ label cachette:
 
 
 
-python:
-    """
+
+
+$"""
 
 ____________________________________________________________________________________________________
 

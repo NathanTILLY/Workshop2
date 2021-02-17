@@ -43,6 +43,8 @@ image bg ville = "bg_ville.png"
 
 image bg villedestroy = "bg_villedestroy.png"
 
+image bg porte = "bg_porte.png"
+
 image athenais neutre = "athenais_neutre.png"
 
 image athenais peur = "athenais_peur.png"
@@ -55,7 +57,33 @@ image robot neutre = "robot_neutre.png"
 
 image robot manchot = "robot_minusbras.png"
 
-image robotbad neutre = "robotbad.png"
+image robotbad neutre = "robotbad_neutre.png"
+
+image robotbad colere1 = "robotbad_colere1.png"
+
+image robotbad colere2 = "robotbad_colere2.png"
+
+image robotbad2 neutre = "robotbad_neutre.png"
+
+image robotbad2 colere1 = "robotbad_colere1.png"
+
+image robotbad2 colere2 = "robotbad_colere2.png"
+
+image douane neutre = "douane_neutre.png"
+
+image douane colere = "douane_colere.png"
+
+image douane2 neutre = "douane_neutre.png"
+
+image douane2 colere = "douane_colere.png"
+
+image drone neutre = "drone_neutre.png"
+
+image drone colere = "drone_colere.png"
+
+# DEFINITION DE VARIABLES DIVERSES
+
+$ chanceDePasser = 50
 
 
 label start:
