@@ -17,7 +17,7 @@ label rencontre:
 
     "*Elle commence à pleurer.*"
 
-    "Alerte, alerte, défaillance système, anomalie détectée. Unité F4 vous devez regagner la centrale, votre système est sûrement endommagé."
+    "\"Alerte, alerte, défaillance système, anomalie détectée. Unité F4 vous devez regagner la centrale, votre système est sûrement endommagé.\""
 
 
     menu:
@@ -48,11 +48,27 @@ label rencontre:
 
             "*La fille se calme.*"
 
-            ath   "Merci, monsieur le robot..."
+            ath "Merci, monsieur le robot..."
 
-            r   "Je suis l'unité F4... Numéro 112... De la brigade des récupérateurs... Et toi, quel... est ton... matricule ?"
+    r   "Je suis l'unité F4... Numéro 112... De la brigade des récupérateurs... Et toi, quel... est ton... matricule ?"
 
-            ath
+    ath "Je... je ne me souviens plus..."
+
+    r   "Que dirais tu de... H1-1F ?"
+
+    ath "Euh… je suis pas un robot moi."
+
+    "*F4 trouve une page déchirée d’un livre parlant d’une divinité.*"
+
+    r   "A... Thé... Naïs... Athénaïs ?"
+
+    a   "Oui, j’aime beaucoup, c’est joli."
+
+    "*F4 marche avec Athénaïs vers la porte de la décharge.*"
+
+    m   "test"
+
+    p   "test"
 
 
 
