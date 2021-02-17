@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 4: expected statement.
-    ﻿
-     ^
+File "game/label_01rencontre.rpy", line 171: choice menuitem expects a non-empty block.
+    "*Courir vers la porte.*":
+                              ^
 
 Ren'Py Version: Ren'Py 7.4.2.1292
-Wed Feb 17 10:21:15 2021
+Wed Feb 17 11:53:19 2021

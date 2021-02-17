@@ -117,19 +117,68 @@ label rencontre:
 
     $ timeout = 10.0
 
-    $ timeout_label= "start"
+    $ timeout_label= "cachette"
 
     menu:
 
-        "balader":
+        "*Fuir.*":
+
+            "*F4 et Athénaïs commencent à courir en direction de la porte*"
+
+            m   "HALTE ! A toutes les unités disponibles, le F4 est en fuite, il a un humain avec lui !"
+
+            "*Commence à courir après F4 et Athénaïs.*"
+
+            r   "Vite... cours... Athénaïs..."
+
+            "*Athénaïs court aussi vite qu’elle puisse, mais commence à être essoufflée*"
+
+            jump cachette
+
+        "*Se cacher.*":
+
+            jump cachette
+
+
+label cachette:
+
+    r   "Cache toi... ici..."
+
+    "*F4 Montre la direction d’une épave de voiture.*"
+
+    "*Il la place sous l’épave puis se glisse au milieu des débris de robots.*"
+
+    "*Quelques minutes plus tard, après avoir semé les gardes, F4 retourne chercher Athénaïs.*"
+
+    r    "Ca... va... petite ?"
+
+    a   "Oui, merci de m'avoir aidée."
+
+    r   "Méfie-toi... Ils sont encore proches."
+
+    show bg porte
+
+    r   "Il... faut... qu’on passe... cette porte..."
+
+    a   "Qu’est-ce qu’il y a derrière cette porte ?"
+
+    r   "Je…je ne… sais pas… C’est notre seule… issue."
+
+    $ timeout_label= None
+
+    menu:
+
+        "*Courir vers la porte.*":
 
             "bla"
 
-        "balader":
+        "*Mentir aux douaniers.*":
 
             "bla"
 
-    jump start
+
+
+
 
 
 
