@@ -131,6 +131,8 @@ label rencontre:
 
             show robotbad colere2
 
+            show robotbad2 colere1
+
             m   "HALTE ! A toutes les unités disponibles, le F4 est en fuite, il a un humain avec lui !"
 
             "*Commence à courir après F4 et Athénaïs.*"
@@ -211,7 +213,54 @@ label cachette:
 
             r   "Je suis l’unité F4... Numéro 112... de la brigade des récupérateurs..."
 
-            p   "Que faites vous ici ?”"
+            p   "Que faites vous ici ?"
+
+            $ chanceDePasser = 50
+
+            menu:
+
+                "\"Je... dois... passer.\"":
+
+                    $ chanceDePasser = chanceDePasser - 10
+
+                "\"La centrale... m'a... demandé d'amener... cette chose... hors de la... décharge.\"":
+
+                    $ chanceDePasser = chanceDePasser + 10
+
+                p   "Hum, très bien et où amenez vous cette chose ?"
+
+            "*Il pointe l'enfant du doigt.*"
+
+            menu:
+
+                "\"La centrale… m’a… demandé de l'exécuter... à l’extérieur... de la décharge\"":
+
+                    $ chanceDePasser = chanceDePasser - 20
+
+                "\"Vous... n’avez pas... besoin de le... savoir\"":
+
+                    $ chanceDePasser = chanceDePasser + 30
+
+            a   "Ils me font peur"
+
+            "*Athénaïs pointe les douaniers du doigt.*"
+
+            p   "OH ! La chose parle ! Qu’est ce que c’est que ce truc ?"
+
+            menu:
+
+                "\"Notre pire... cauchemar... c’est pour... cela que... je dois l’éliminer...\"":
+
+                    $ chanceDePasser = chanceDePasser + 20
+
+                "\"C’est un... enfant, je... dois l’éliminer...\""
+
+                    $ chanceDePasser = chanceDePasser - 50
+
+
+
+
+
 
 
 

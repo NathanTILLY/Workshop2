@@ -81,10 +81,6 @@ image drone neutre = "drone_neutre.png"
 
 image drone colere = "drone_colere.png"
 
-# DEFINITION DE VARIABLES DIVERSES
-
-$ chanceDePasser = 50
-
 
 label start:
 

@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/label_01rencontre.rpy", line 200: expected 'simple_expression' not found.
-    xalign = 0.75
-           ^
+File "game/label_01rencontre.rpy", line 256: Line is followed by a block, despite not being a menu choice. Did you forget a colon at the end of the line?
+    "\"C’est un... enfant, je... dois l’éliminer...\""
+                                                      ^
 
 Ren'Py Version: Ren'Py 7.4.2.1292
-Wed Feb 17 13:55:26 2021
+Wed Feb 17 15:59:08 2021
