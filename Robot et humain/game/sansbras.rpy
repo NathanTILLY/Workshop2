@@ -1,51 +1,58 @@
-python:
-    flag = True
-# Règle le timer sur un certain nombre de secondes. Peut-être modifié avec en plein milieu du code avec $timeout = 10.0 par exemple
-default timeout = 5.0
 
-# timeout_label renvoie au label vers lequel le joueur sera redirigé en cas de temps écoulé.
-# pour y assigner un label, écrivez $timeout_label = "start" par exemple
-# ne pas oublier de remettre le timeout_label à None pour ne pas que les futurs choix soient aussi timés.
-#Prenez en note qu'un nom de label doit être entre guillemets, mais pas None.
-default timeout_label = None
-
-default persistent.timed_choices = True
-
-screen choice(items):
-    style_prefix "choice"
-
-    vbox:
-        for i in items:
-            textbutton i.caption action i.action
-
-    if (timeout_label is not None) and persistent.timed_choices:
-
-        bar:
-            xalign 0.5
-            ypos 400
-            xsize 740
-            value AnimatedValue(old_value=0.0, value=1.0, range=1.0, delay=timeout)
-
-        timer timeout action Jump(timeout_label)
-
-
-# Tout ça est à coller, de préférence au tout début du code.
-# Pour que votre choix sois timé, attribuez juste avant à votre timeout_label une valeur autre que None
 
 label sansbras:
     show bg villedestroy
+    show robot minusbras at right
+    show athenais at right
     r "ok on est plus ou moins good"
     $timeout_label = "timerUno"
     menu:
         "Continuer à avancer":
 
             r "let's go on avance"
+            $timeout_label = None
+            menu:
+                "se retourner":
+                    r " Je me demande si on est poursuivi voyons voir"
+                    r " je vais monter sur cette pile pour scout la zone Athenais bouge pas"
+                    "*grimpe*"
+                    r " ok voyons voir"
+                    r " oh fuck ils sont vraiment pas loin"
+                    r " que faire est ce qu'on se planque et on se repose   ou est ce qu'on coure en éspérant les semer ?..."
+                    menu:
+                        "Courir":
+                            r "vaut mieux pas prendre de risque et courrir"
+                            jump courir
+                        "se reposer":
+                            r "Autant prendre le risque et se reposer en se cachant, Athenais a l'air fatigué"
+                            jump fauneFlore
+                "se reposer":
+                    r "go se reposer t'a l'air fatiguer"
 
 
         "Se reposer dans un refuge médiocre":
             r "Oh regarde une cabane destroy"
             r "go faire une petite pause"
             a "ça marche"
+            "le lendemain"
+            r " ok c'est carré Athenais les soldats ont tracé"
+            a "nickel"
+            $timeout_label = None
+            menu:
+                "aller à droite et Découvrir faune et flore":
+                    r " go à droite"
+                    jump fauneFlore
+                "aller à gauche et Découvrir la ville":
+                    r "go à gauche"
+                    "Nos deux amis découvre la ville"
+                    r " encore un croisement"
+                    menu:
+                        "aller à droite et Découvrir faune et flore":
+                            r "go à droite ce coup-ci"
+                            jump fauneFlore
+                        "aller à gauche":
+                            r "fulllllllll gauche let's go"
+                            jump drone
 
 
 return
