@@ -66,9 +66,18 @@ label rencontre:
 
     "*F4 marche avec Athénaïs vers la porte de la décharge.*"
 
-    m   "test"
+    m   "Unité F4-112R, arrêtez-vous !"
 
-    p   "test"
+    "*F4 s’arrête avec Athénaïs.*"
+
+    m "Veuillez retourner à la centrale pour effectuer une maintenance et remettez nous l’enfant, premier avertissement."
+
+    r   "Qu’allez vous... Faire de la petite... ?"
+
+    "*F4 protège Athénaïs avec son corps.*"
+
+    m   "Veuillez retourner à la centrale pour effectuer une maintenance et remettez-nous l’enfant. Dernier avertissement avant désactivation"
+
 
 
 
