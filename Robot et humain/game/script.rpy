@@ -56,11 +56,13 @@ label start:
 
     n "Elkjaer, dernier bastion de l'humanité"
 
-    n "Athenais se fait dégage de la cité et attérit en bas"
+    n "Athenais se fait yeet de la cité et attérit en bas"
+
+    nvl clear
 
     play sound "tumbleweed-sound-effect-hq.mp3"
 
-    scene bg villedestroy
+    scene bg decharge
 
     show robot normal at right
 
