@@ -43,6 +43,9 @@ label sansbras:
 
 
         "Se reposer dans un refuge médiocre":
-            hide screen countdown
+            r "Oh regarde une cabane destroy"
             r "go faire une petite pause"
+            a "ça marche"
+
+
 return

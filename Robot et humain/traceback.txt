@@ -1,74 +1,32 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/sansbras.rpy", line 11, in script
-    menu:
-  File "renpy/common/000window.rpy", line 111, in _window_auto_callback
-    _window_hide(auto=True)
-  File "renpy/common/000window.rpy", line 101, in _window_hide
-    renpy.with_statement(trans)
-  File "game/sansbras.rpy", line 1, in execute
-    screen countdown:
-  File "game/sansbras.rpy", line 1, in execute
-    screen countdown:
-  File "game/sansbras.rpy", line 3, in execute
-    bar value time range timer_range xalign 0.5 yalign 0.9 xmaximum 300 at alpha_dissolve
-  File "game/sansbras.rpy", line 3, in keywords
-    bar value time range timer_range xalign 0.5 yalign 0.9 xmaximum 300 at alpha_dissolve
-  File "game/sansbras.rpy", line 3, in <module>
-    bar value time range timer_range xalign 0.5 yalign 0.9 xmaximum 300 at alpha_dissolve
-NameError: name 'alpha_dissolve' is not defined
+  File "renpy/common/00start.rpy", line 187, in script
+    python:
+  File "renpy/common/00start.rpy", line 188, in <module>
+    renpy.execute_default_statement(True)
+  File "game/timerUno.rpy", line 4, in set_default
+    default timeout = 5.0
+Exception: store.timeout is being given a default a second time.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/sansbras.rpy", line 11, in script
-    menu:
-  File "renpy/ast.py", line 1600, in execute
-    statement_name("menu")
-  File "renpy/ast.py", line 46, in statement_name
-    i(name)
-  File "renpy/common/000window.rpy", line 111, in _window_auto_callback
-    _window_hide(auto=True)
-  File "renpy/common/000window.rpy", line 101, in _window_hide
-    renpy.with_statement(trans)
-  File "renpy/exports.py", line 1637, in with_statement
-    return renpy.game.interface.do_with(trans, paired, clear=clear)
-  File "renpy/display/core.py", line 2546, in do_with
-    clear=clear)
-  File "renpy/display/core.py", line 3007, in interact
-    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, **kwargs)
-  File "renpy/display/core.py", line 3418, in interact_core
-    root_widget.visit_all(lambda i : i.per_interact())
-  File "renpy/display/core.py", line 566, in visit_all
-    d.visit_all(callback, seen)
-  File "renpy/display/core.py", line 566, in visit_all
-    d.visit_all(callback, seen)
-  File "renpy/display/core.py", line 566, in visit_all
-    d.visit_all(callback, seen)
-  File "renpy/display/core.py", line 566, in visit_all
-    d.visit_all(callback, seen)
-  File "renpy/display/screen.py", line 432, in visit_all
-    callback(self)
-  File "renpy/display/core.py", line 3418, in <lambda>
-    root_widget.visit_all(lambda i : i.per_interact())
-  File "renpy/display/screen.py", line 443, in per_interact
-    self.update()
-  File "renpy/display/screen.py", line 631, in update
-    self.screen.function(**self.scope)
-  File "game/sansbras.rpy", line 1, in execute
-    screen countdown:
-  File "game/sansbras.rpy", line 1, in execute
-    screen countdown:
-  File "game/sansbras.rpy", line 3, in execute
-    bar value time range timer_range xalign 0.5 yalign 0.9 xmaximum 300 at alpha_dissolve
-  File "game/sansbras.rpy", line 3, in keywords
-    bar value time range timer_range xalign 0.5 yalign 0.9 xmaximum 300 at alpha_dissolve
-  File "game/sansbras.rpy", line 3, in <module>
-    bar value time range timer_range xalign 0.5 yalign 0.9 xmaximum 300 at alpha_dissolve
-NameError: name 'alpha_dissolve' is not defined
+  File "renpy/common/00start.rpy", line 187, in script
+    python:
+  File "renpy/ast.py", line 922, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "renpy/python.py", line 2218, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "renpy/common/00start.rpy", line 188, in <module>
+    renpy.execute_default_statement(True)
+  File "renpy/exports.py", line 3581, in execute_default_statement
+    i.set_default(start)
+  File "game/timerUno.rpy", line 4, in set_default
+    default timeout = 5.0
+Exception: store.timeout is being given a default a second time.
 
 Windows-10-10.0.18362
 Ren'Py 7.4.2.1292
 Robot et humain 1.0
-Tue Feb 16 15:12:15 2021
+Wed Feb 17 09:34:40 2021

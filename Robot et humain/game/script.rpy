@@ -39,7 +39,7 @@ label start:
 
     play sound "tumbleweed-sound-effect-hq.mp3"
 
-    scene bg villedestroy
+    scene bg decharge
 
     show robot normal at right
 
