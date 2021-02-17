@@ -5,15 +5,18 @@
 
 define n = Character("Narrateur", kind = nvl)
 define c = Character("Choix")
-define r = Character("F4-112R")
-define a = Character("Athénaïs ")
-define m = Character("S1-25C")
-define p = Character("P6-4D")
+define r = Character("F4-112R", color = "#464CBD")
+define a = Character("Athénaïs", color = "#B361C9")
+define ath = Character("Fillette", color = "#B361C9")
+define m = Character("S1-25C", color = "#B0413E")
+define p = Character("P6-4D", color = "#588A66")
 
 
 # The game starts here.
 
 label start:
+
+    jump rencontre
 
     # Show a background. This uses a placeholder by default, but you can
     # add a file (named either "bg room.png" or "bg room.jpg") to the
