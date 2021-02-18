@@ -11,18 +11,20 @@ label enfantAttaque:
 
     menu:
         "Se précipiter pour la sauver":
-            $ jambe = True
+
             "*F4 se rue sur le drone mais ce dernier étant à l'affût saute sur la jambe de F4, et la lacère de part en part. Le drone arrache la jambe du robot mais celui-ci lui donne un coup qui lui est fatal.*"
 
             a "F4, ta jambe…"
 
             r "Je t’ai... protégé c’est... le plus important"
-
+            $ jambe = True
+            
             jump cable
         "*Attendre le bon moment*":
             "*F4 analyse la situation, et au moment où le drone relâche son attention il l’embroche de sa main et le détruit*"
 
             a"Merci F4, tu es mon sauveur"
             "*En lui sautant dans le bras*"
+            $ jambe = False
 
             jump cable

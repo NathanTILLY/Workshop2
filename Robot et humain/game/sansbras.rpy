@@ -1,14 +1,18 @@
 
 
 label sansbras:
+    $ pasDeBras = True
     show bg villedestroy
     show robot minusbras at right
     show athenais at right
     "*Après avoir passé la porte, F4 et Athénaïs arrivent dans l’ancienne ville humaine dans laquelle la nature a repris ses droits*"
     $ timeout = 5.0
     $timeout_label = "timerUno"
+
+
     menu:
         "Continuer à avancer":
+            $timeout_label = None
             "*F4 et Athénaïs décident de continuer leur chemin en suivant la route.*"
 
             "*Athénaïs tend sa main à F4*"
@@ -51,53 +55,38 @@ label sansbras:
                     jump fauneFlore
 
 
-                "Aller dans le refuge à droite":
+        "Aller dans le refuge à droite":
 
-                    r "Allons...à droite… j’ai un bon... pressentiment… "
+            r "Allons...à droite… j’ai un bon... pressentiment… "
 
-                    "*Athénaïs tend sa main à F4*"
 
-                    "Pourquoi… Me tends-tu… Ta main… Athénaïs?"
+            "*F4 et Athénaïs après quelques minutes de marche arrivent au fameux refuge que F4 avait repéré*"
 
-                    a "Mes parents me tenaient la main pour me réconforter"
+            r "On va... pouvoir se reposer…. un peu ici… en attendant que les soldats... passent"
 
-                    "*F4 prend la main d’Athénaïs*"
+            "*Après avoir vu les S1 passer ils décident de reprendre prudemment leur route*"
 
-                    a "AH ! Mais ta main est super froide !"
+            "*Ils arrivent à un carrefour et ils remarquent que la route de gauche est impraticable, pour continuer ils doivent choisir de passer par des escaliers ou de continuer la route*"
 
-                    r "Pardon...attends quelques secondes"
+            menu:
+                "Prendre les escaliers":
 
-                    "*F4 active son système auto chauffant*"
 
-                    a "C’est bien mieux comme ça !"
+                    "*Après avoir monté les escaliers F4 et Athénaïs arrivent dans une grande étendue au milieu d’arbres et de hautes herbes*"
 
-                    "*F4 et Athénaïs après quelques minutes de marche arrivent au fameux refuge que F4 avait repéré*"
+                    jump fauneFlore
+                "Continuer la route":
 
-                    r "On va... pouvoir se reposer…. un peu ici… en attendant que les soldats... passent"
-
-                    "*Après avoir vu les S1 passer ils décident de reprendre prudemment leur route*"
-
-                    "*Ils arrivent à un carrefour et ils remarquent que la route de gauche est impraticable, pour continuer ils doivent choisir de passer par des escaliers ou de continuer la route*"
+                    $ Arc2 = True
+                    jump drone
 
                     menu:
                         "aller à droite et Découvrir faune et flore":
-                            #*Prendre les escaliers*
-
-                            "*Après avoir monté les escaliers F4 et Athénaïs arrivent dans une grande étendue au milieu d’arbres et de hautes herbes*"
-
+                            r "go à droite ce coup-ci"
                             jump fauneFlore
-                        "Continuer la route":
-
-                            $ Arc2 = True
+                        "aller à gauche":
+                            r "fulllllllll gauche let's go"
                             jump drone
-
-                            menu:
-                                "aller à droite et Découvrir faune et flore":
-                                    r "go à droite ce coup-ci"
-                                    jump fauneFlore
-                                "aller à gauche":
-                                    r "fulllllllll gauche let's go"
-                                    jump drone
 
 
 return

@@ -33,4 +33,6 @@ label rapprochement:
 
     "*Après ce moment de rigolade ils reprennent leur chemin vers le câble*"
 
+    $ posture = False
+
     jump enfantAttaque

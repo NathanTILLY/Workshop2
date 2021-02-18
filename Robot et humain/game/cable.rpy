@@ -1,8 +1,8 @@
 define al = Character("Alerte", color = "#82040c")
-define g = Character("Gérant de la ville", color = "#588A66")
-define me = Character("Mère d'Athenais", color = "#d7f542")
-define pe = Character("Père d'Athenais", color = "#d7f542")
-define pa = Character("Parents d'Athenais", color = "#d7f542")
+define g = Character("Gérant ", color = "#588A66")
+define fe = Character("Mère ", color = "#d7f542")
+define pe = Character("Père ", color = "#d7f542")
+define pa = Character("Parents ", color = "#d7f542")
 
 label cable:
     "*Après un certain temps de marche, ils arrivent enfin au câble, de peur Athénaïs se colle contre F4.*"
@@ -11,7 +11,8 @@ label cable:
 
     "F4 dans sa tête :"
 
-    r "Que dois-je répondre à ça ? Que dois-je faire ? Dois-je vraiment imposer mon choix ? Suis-je légitime à la garder ? Pourrais-je la protéger des dangers d’un monde qui m'est inconnu ? Peut-être que ses parents veulent la retrouver ? Sera-t-elle vraiment heureuse avec moi ?"
+    r "Que dois-je répondre à ça ? Que dois-je faire ? Dois-je vraiment imposer mon choix ? Suis-je légitime à la garder ?"
+    r "Pourrais-je la protéger des dangers d’un monde qui m'est inconnu ? Peut-être que ses parents veulent la retrouver ? Sera-t-elle vraiment heureuse avec moi ?"
 
     a "F4, tu fumes !"
 

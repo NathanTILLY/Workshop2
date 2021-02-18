@@ -6,6 +6,8 @@ label ours:
     $ timeout_label = "timerours"
     menu:
         "Prendre Athénaïs et se cacher":
+            $ posture = False
+            $ timeout_label = None
 
             r "Ne...bouge plus...et ne fais... pas de bruit."
 
@@ -15,6 +17,7 @@ label ours:
 
             jump enfantAttaque
         "Protéger Athénaïs de l’ours en la faisant reculer":
+            $ timeout_label = None
             $ posture = True
 
             "*L’ours remarque que F4 se met en position de défense et il décide de protéger son territoire en sautant sur ce dernier. Il est projeté au sol.*"
@@ -30,6 +33,7 @@ label ours:
 
 label timerours:
     $ posture = True
+    $ timeout_label = None
     "*L’ours se jette sur Athénaïs, mais F4 s’interpose pour la protéger. Il est projeté au sol.*"
     "*F4 trouve un morceau de métal à côté de lui et frappe l’ours avec pour s’échapper des griffes de celui-ci*"
 

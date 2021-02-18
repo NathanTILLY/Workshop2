@@ -2,21 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/cable.rpy", line 24: if statement expects a non-empty block.
-    if pasDeBras == True and jambe == True:
-                                           ^
-
-File "game/cable.rpy", line 25: expected statement.
-    elif posture == True and pasDeBras == True:
-                 ^
-
-File "game/cable.rpy", line 26: expected statement.
-    elif jambe == True and posture == True:
-               ^
-
-File "game/cable.rpy", line 30: expected statement.
-    else:
-        ^
+File "game/sansbras.rpy", line 58: expected statement.
+    "Aller dans le refuge à droite":
+                                   ^
 
 Ren'Py Version: Ren'Py 7.4.2.1292
-Thu Feb 18 15:30:09 2021
+Thu Feb 18 17:50:23 2021

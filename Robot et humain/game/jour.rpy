@@ -45,8 +45,9 @@ label jour:
 
                     jump finUno
                 "Oui":
-                    r "go à droite"
+
                     jump soldat
         "*Passer à l’extérieur*":
             a " Je préfère passer par l’extérieur" # (SI ARC 1 V2)
+            $ Arc2 = False
             jump drone

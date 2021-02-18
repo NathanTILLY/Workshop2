@@ -1,6 +1,7 @@
 label rencontre:
 
     scene bg ville
+    play music "epilogue__rencontre.mp3" fadeout 1
 
     n   "En l’an 3000, à la suite d’une rébellion des robots, les humains ont dû se réfugier dans des cités volantes. Notre histoire se déroule un siècle plus tard au pied de la cité Elkjaer."
     n   "Le gouvernement en place à mis en œuvre une politique d'enfant unique suite à la surpopulation de la ville. Dès leur plus jeune âge, les enfants se font éjecter dans les tréfonds du bas monde."
@@ -38,6 +39,8 @@ label rencontre:
 
     "\"Alerte, alerte, défaillance système, anomalie détectée. Unité F4 vous devez regagner la centrale, votre système est sûrement endommagé.\""
 
+    stop music fadeout 1
+    play music "decharge__porte.mp3" fadeout 1
 
     menu:
 
@@ -452,8 +455,9 @@ label suiteBleue:
     "*Les gardes ne les retrouveront pas avant un certain temps.*"
 
     "*Après avoir passé la porte, F4 et Athénaïs arrivent dans l’ancienne ville humaine dans laquelle la nature a repris ses droits.*"
-
+    $ pasDeBras = False
     jump avecbras
+    stop music fadeout 1
 
 
 
@@ -480,5 +484,6 @@ label suiteVerte:
     "*Il commence alors à laisser une trace d'huile derrière lui, indiquant sa direction.*"
 
     jump sansbras
+    stop music fadeout 1
 
     #!!!!!!A PARTIR DE CE MOMENT LA, LES SPRITES DE F4 A UTILISER SERONT bras!!!!!!

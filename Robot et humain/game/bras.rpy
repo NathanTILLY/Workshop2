@@ -3,6 +3,7 @@ label avecbras:
         #show bg exterieurun
         show robot_neutre at left
         show athenais_neutre at left
+        $ pasDeBras = False
         "*Après avoir passé la porte, F4 et Athénaïs arrivent dans l’ancienne ville humaine dans laquelle la nature a repris ses droits*"
         menu:
             "Continuer à avancer":
@@ -84,8 +85,8 @@ label avecbras:
                         "*Après avoir monté les escaliers F4 et Athénaïs arrivent dans une grande étendue au milieu d’arbres et de hautes herbes*"
 
                         jump fauneFlore
-                    "aller à gauche et Découvrir la ville":
-                        "*Continuer la route*"
+                    "Continuer la route":
+
 
                         $ Arc2 = True
                         jump drone

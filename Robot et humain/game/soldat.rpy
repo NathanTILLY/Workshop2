@@ -1,5 +1,5 @@
 label soldat:
-    "*On peut… y aller… si tu veux.*"
+    r "*On peut… y aller… si tu veux.*"
 
     a "Ouais ! Trop bien, je t’adore F4"
 
@@ -7,9 +7,11 @@ label soldat:
 
     "*Après quelques instants, F4 aperçoit un groupe de S1 au loin*"
     $ timeout = 3.0
-    $timeout_label = "enfantAttaque"
+    $timeout_label = "soldatEmbusquer"
     menu:
+
         "essayer de s'enfuir":
+            $timeout_label = None
             "*Prendre Athénaïs par la main et courir*"
 
             "*F4 et Athénaïs commencent à courir à l’opposé d’où se trouvent les S1, mais se ils font repérer dans leur course*"
@@ -24,6 +26,7 @@ label soldat:
 
             jump soldatEmbusquer
         "essaie de masquer sa présence":
+            $timeout_label = None
 
             "*Prévenir Athénaïs et se cacher*"
 
@@ -32,3 +35,5 @@ label soldat:
             r "Ne...bouge plus...et ne fais... pas de bruit."
 
             "*F4 attend que les S1 passent avant de reprendre la route*"
+            $ posture = False
+            jump enfantAttaque
