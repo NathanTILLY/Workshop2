@@ -367,6 +367,21 @@ label cachette:
 
                 jump suiteVerte
 
+label suiteVerte:
+
+    "*Lors de leur fuite, F4 se fait tirer dessus.*"
+
+    show robot neutre
+
+    $ perteDeBras = True
+
+    image robot neutre = "robot_minusbras.png"
+
+    "*Blessé, F4 perd un bras dans sa course.*"
+
+    "*Il commence alors à laisser une trace d'huile derrière lui, indiquant sa direction.*"
+
+
 
 
 

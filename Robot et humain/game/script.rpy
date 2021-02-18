@@ -55,8 +55,6 @@ image athenais triste = "athenais_triste.png"
 
 image robot neutre = "robot_neutre.png"
 
-image robot manchot = "robot_minusbras.png"
-
 image robotbad neutre = "robotbad_neutre.png"
 
 image robotbad colere1 = "robotbad_colere1.png"
@@ -81,6 +79,9 @@ image drone neutre = "drone_neutre.png"
 
 image drone colere = "drone_colere.png"
 
+# FLAGS
+
+define perteDeBras = False
 
 label start:
 

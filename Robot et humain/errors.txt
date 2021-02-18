@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/label_01rencontre.rpy", line 256: Line is followed by a block, despite not being a menu choice. Did you forget a colon at the end of the line?
-    "\"C’est un... enfant, je... dois l’éliminer...\""
-                                                      ^
+File "game/script - Copie.rpy", line 8: is not terminated with a newline. (Check strings and parenthesis.)
+(Perhaps you left out a " at the end of the first line.)
+            "non
 
 Ren'Py Version: Ren'Py 7.4.2.1292
-Thu Feb 18 08:21:38 2021
+Thu Feb 18 08:59:09 2021
