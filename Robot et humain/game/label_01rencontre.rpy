@@ -453,6 +453,8 @@ label suiteBleue:
 
     "*Après avoir passé la porte, F4 et Athénaïs arrivent dans l’ancienne ville humaine dans laquelle la nature a repris ses droits.*"
 
+    jump avecbras
+
 
 
 
@@ -475,6 +477,8 @@ label suiteVerte:
     "*Blessé, F4 perd un bras dans sa course.*"
 
     "*Il commence alors à laisser une trace d'huile derrière lui, indiquant sa direction.*"
+
+    jump sansbras
 
     #!!!!!!A PARTIR DE CE MOMENT LA, LES SPRITES DE F4 A UTILISER SERONT bras!!!!!!
 

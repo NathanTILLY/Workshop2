@@ -193,11 +193,6 @@ image robot bras jambe dos triste = "F4_dosCasse_sansBras_sans_Jambe_triste.png"
 
 # FLAGS
 
-define perteDeBras = False
-define perteDeJambe = False
-define perteDeDos = False
-
-
 
 label start:
 
