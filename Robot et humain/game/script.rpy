@@ -201,8 +201,6 @@ define perteDeDos = False
 
 label start:
 
-    jump suiteVerte
-
     jump rencontre
 
 return

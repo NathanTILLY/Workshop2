@@ -13,7 +13,7 @@ label rencontre:
 
     play sound "tumbleweed-sound-effect-hq.mp3"
 
-    show robot neutre at center
+    show robot triste at center
 
     r   "C'est l'heure... Je dois y..."
     r   "Retourner..."
@@ -28,7 +28,7 @@ label rencontre:
 
     "*Il sort l'enfant de la capsule.*"
 
-    show robot neutre at left
+    show robot gene at left
 
     show athenais triste at right
 
@@ -42,6 +42,8 @@ label rencontre:
     menu:
 
         "*Couper la connexion avec la centrale.*":
+
+            show robot neutre
 
             r   "Viens petite... Ca va... On va retrouver tes... Parents."
 
@@ -64,6 +66,8 @@ label rencontre:
             ath "Je veux rester avec toi... Ne me laisse pas..."
 
             "*Insupporté par le bruit de l'alerte, le robot décide de retirer sa puce.*"
+
+            show robot neutre
 
             r   "Viens petite... Ca va... On va retrouver tes... Parents."
 
@@ -99,13 +103,15 @@ label rencontre:
 
     show robotbad neutre at center
 
+    show robot peur
+
     show athenais peur
 
     m "Veuillez retourner à la centrale pour effectuer une maintenance et remettez nous l’enfant, premier avertissement."
 
     r   "Qu’allez vous... Faire de la petite... ?"
 
-    show robot neutre at right
+    show robot colere at right
 
     show athenais peur at right behind robot
 
@@ -135,11 +141,11 @@ label rencontre:
 
             m   "HALTE ! A toutes les unités disponibles, le F4 est en fuite, il a un humain avec lui !"
 
-            "*Commence à courir après F4 et Athénaïs.*"
+            "*L'officier Commence à courir après F4 et Athénaïs.*"
 
             r   "Vite... cours... Athénaïs..."
 
-            "*Athénaïs court de mieux possible, mais commence à être essoufflée.*"
+            "*Athénaïs court du mieux possible, mais commence à être essoufflée.*"
 
             jump cachette
 
@@ -154,7 +160,7 @@ label cachette:
 
     hide robotbad2
 
-    show robot at left
+    show robot peur at left
 
     r   "Cache toi... ici..."
 
@@ -168,19 +174,23 @@ label cachette:
 
     r    "Ca... va... petite ?"
 
-    show athenais neutre
+    show athenais neutre at right
 
     a   "Oui, merci de m'avoir aidée."
+
+    show robot colere
 
     r   "Méfie-toi... Ils sont encore proches."
 
     show bg porte
 
+    show robot neutre
+
     r   "Il... faut... qu’on passe... cette porte..."
 
     a   "Qu’est-ce qu’il y a derrière cette porte ?"
 
-    r   "Je…je ne… sais pas… C’est notre seule… issue."
+    r   "Je... Je ne... Sais pas... C’est notre seule... issue."
 
     $ timeout_label= None
 
@@ -206,10 +216,26 @@ label cachette:
 
             "*Les P6-4D lancent une alarme qui alerte les S1 à proximité.*"
 
+            hide douane
+
+            hide douane2
+
             jump suiteVerte
 
 
         "*Mentir aux douaniers.*":
+
+            show douane neutre at left
+
+            show douane2 neutre at right
+
+            show robot gene:
+                xalign 0.4
+                yalign 1.0
+
+            show athenais peur:
+                xalign 0.6
+                yalign 1.0
 
             p   "Veuillez vous identifier."
 
@@ -259,6 +285,10 @@ label cachette:
 
                     $ chanceDePasser = chanceDePasser - 50
 
+            hide robot
+
+            hide athenais
+
             "*L’un des douaniers reçoit un appel.*"
 
             "\"A toutes les unités, une unité F4 et un enfant sont en fuite.\""
@@ -277,7 +307,19 @@ label cachette:
 
             else:
 
+                show douane colere
+
+                show douane2 colere
+
                 p "Veuillez patienter quelques instants, nous allons procéder à des vérifications supplémentaires."
+
+                show robot gene:
+                    xalign 0.4
+                    yalign 1.0
+
+                show athenais peur:
+                    xalign 0.6
+                    yalign 1.0
 
                 "*L’un des P6 appelle discrètement une unité de S1.*"
 
@@ -288,6 +330,18 @@ label cachette:
                 jump suiteVerte
 
         "*Dire la vérité aux douaniers.*":
+
+            show douane neutre at left
+
+            show douane2 neutre at right
+
+            show robot neutre:
+                xalign 0.4
+                yalign 1.0
+
+            show athenais neutre:
+                xalign 0.6
+                yalign 1.0
 
             $ chanceDePasser = 50
 
@@ -321,6 +375,8 @@ label cachette:
 
                     $ chanceDePasser = chanceDePasser - 20
 
+            show athenais contente
+
             a   "Il est mignon lui avec sa tête."
 
             "*Elle pointe l’un des douaniers du doigt.*"
@@ -328,6 +384,8 @@ label cachette:
             p   "OH ! Merci bien petite chose !"
 
             p   "Mais qu'est-ce qu'un enfant ?"
+
+            show athenais neutre
 
             menu:
 
@@ -338,6 +396,10 @@ label cachette:
                 "\"Un humain... fragile, qui a besoin... de sa famille.\"":
 
                     $ chanceDePasser = chanceDePasser + 30
+
+            hide robot
+
+            hide athenais
 
             "*L’un des douaniers reçoit un appel.*"
 
@@ -359,6 +421,14 @@ label cachette:
 
                 p "Veuillez patienter quelques instants, nous allons procéder à des vérifications supplémentaires."
 
+                show robot gene:
+                    xalign 0.4
+                    yalign 1.0
+
+                show athenais peur:
+                    xalign 0.6
+                    yalign 1.0
+
                 "*L’un des P6 appelle discrètement une unité de S1.*"
 
                 "*Après quelques minutes, une patrouille de S1 arrive à la porte.*"
@@ -367,13 +437,47 @@ label cachette:
 
                 jump suiteVerte
 
+label suiteBleue:
+
+    hide douane
+
+    hide douane2
+
+    show robot neutre at left
+
+    show athenais neutre at right
+
+    "*F4 et Athénaïs, ont passé la porte sans problème.*"
+
+    "*Les gardes ne les retrouveront pas avant un certain temps.*"
+
+    "*Après avoir passé la porte, F4 et Athénaïs arrivent dans l’ancienne ville humaine dans laquelle la nature a repris ses droits.*"
+
+
+
+
 label suiteVerte:
 
+    hide douane
+
+    hide douane2
+
+    show robot neutre at left
+
+    show athenais neutre at right
+
     "*Lors de leur fuite, F4 se fait tirer dessus.*"
+
+    show robot bras peur
+
+    show athenais peur
 
     "*Blessé, F4 perd un bras dans sa course.*"
 
     "*Il commence alors à laisser une trace d'huile derrière lui, indiquant sa direction.*"
+
+    #!!!!!!A PARTIR DE CE MOMENT LA, LES SPRITES DE F4 A UTILISER SERONT bras!!!!!!
+
 
 
 
