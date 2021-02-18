@@ -21,20 +21,29 @@ label timerUno:
 
             menu:
                 "Prendre un chemin impraticable":
-                    
+
+                    "*F4 et Athénaïs se ruent vers un chemin impraticable pour eux et pour le drone, mais se cachent au dernier moment pour le duper.*"
+
+                    "*Arrivé au niveau de l'impasse, le drone ne voit plus ses cibles et fait demi-tour pour continuer ses recherches.*"
+
+                    "*F4 prend Athénaïs par la main et commence à courir avec elle.*"
+
+                    "*Après quelques instants de course poursuite, F4 se rend compte qu’ils ont perdu le drone de vue.*"
+
+                    r   "Je… crois… qu’on l’a… semé."
+
+                    "*Avant même qu’Athénaïs ne puisse répliquer, le drone surgit et attrape la jambe de F4. Il commence à le mordre pour l’arracher.*"
+
+                    "*Athénaïs voit au loin des S1 et des D1 arriver et prévient F4.*"
+
+                    a   "Vite F4, d’autres robots méchants arrivent !"
+
+
+
                     jump sbChemin2
 
+                "Continuer sur la route":
 
-
-
-
-
-
-
-
-
-
-                "hexagonale":
                     r "un boulon hexagonale ?"
                     d "niet je vais te croquer toi"
 
