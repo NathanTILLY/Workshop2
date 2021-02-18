@@ -1,16 +1,7 @@
 label soldatEmbusquer:
 
+    "*Plusieurs balles sifflent à côté des capteurs de F4, mais quasiment aucune ne le touche*"
 
+    "*Pendant cette intense course poursuite, F4 reçoit une balle au niveau de son cou mais il continue de courir et de protéger Athénaïs. Après cela F4 voit les soldats arrêter de courir et le laisse fuir avec la petite*"
 
-
-    "PIOU"
-    r "Aoutch"
-    r " C'était quoi ça ?"
-    "à quelque centaines de mettres de là"
-    p "A toutes les unités le renégat s'est prit une puce de réinitialisation vous embêter pas à continuer à le suivre"
-    "Quelques heures plus tard"
-    r "Ok on a réussi à les semer Ahenais"
-    r "Je me demande qu'est ce qui m'a tiré dessus quand même -_-"
-    a "blablalba"
-    r "blablabla"
     jump fin3

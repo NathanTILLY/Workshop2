@@ -37,8 +37,6 @@ define p = Character("P6-4D", color = "#588A66")
 
 image bg blanc = "bg_blanc.png"
 
-image bg epilogue = "bg_epilogue.png"
-
 image bg noir = "bg_noir.png"
 
 image bg ville = "bg_ville.png"
@@ -46,6 +44,10 @@ image bg ville = "bg_ville.png"
 image bg villedestroy = "bg_villedestroy.png"
 
 image bg porte = "bg_porte.png"
+
+image bg ville1 jour = "bg_ville1jour.png"
+
+image bg ville2 jour = "bg_ville2jour.png"
 
 image athenais neutre = "athenais_neutre.png"
 
@@ -197,8 +199,6 @@ image robot bras jambe dos triste = "F4_dosCasse_sansBras_sans_Jambe_triste.png"
 
 
 label start:
-
-    jump timerUno
 
     jump rencontre
 

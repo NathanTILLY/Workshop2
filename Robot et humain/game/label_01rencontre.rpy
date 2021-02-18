@@ -1,12 +1,10 @@
 label rencontre:
 
-    scene bg epilogue
+    scene bg ville
+    play music "epilogue__rencontre.mp3" fadeout 1
 
     n   "En l’an 3000, à la suite d’une rébellion des robots, les humains ont dû se réfugier dans des cités volantes. Notre histoire se déroule un siècle plus tard au pied de la cité Elkjaer."
     n   "Le gouvernement en place à mis en œuvre une politique d'enfant unique suite à la surpopulation de la ville. Dès leur plus jeune âge, les enfants se font éjecter dans les tréfonds du bas monde."
-
-    scene bg ville
-
     n   "Dans ce monde où la présence humaine n'est plus, les robots sont maîtres : ils se servent des \"offrandes\" du monde d'en haut pour survivre."
     n   "Ils récupèrent les capsules dans lesquelles se trouvent les enfants, puis ils utilisent leur énergie vitale comme combustible pour leur propre survie."
 
@@ -14,7 +12,7 @@ label rencontre:
 
     scene bg villedestroy
 
-    play sound "tumbleweed-sound-effect-hq.mp3"
+
 
     show robot triste at center
 
@@ -41,6 +39,8 @@ label rencontre:
 
     "\"Alerte, alerte, défaillance système, anomalie détectée. Unité F4 vous devez regagner la centrale, votre système est sûrement endommagé.\""
 
+    stop music fadeout 1
+    play music "decharge__porte.mp3" fadeout 1
 
     menu:
 
@@ -455,8 +455,9 @@ label suiteBleue:
     "*Les gardes ne les retrouveront pas avant un certain temps.*"
 
     "*Après avoir passé la porte, F4 et Athénaïs arrivent dans l’ancienne ville humaine dans laquelle la nature a repris ses droits.*"
-
+    $ pasDeBras = False
     jump avecbras
+    stop music fadeout 1
 
 
 
@@ -478,9 +479,11 @@ label suiteVerte:
     show athenais peur
 
     "*Blessé, F4 perd un bras dans sa course.*"
+    $ pasDeBras = True
 
     "*Il commence alors à laisser une trace d'huile derrière lui, indiquant sa direction.*"
 
     jump sansbras
+    stop music fadeout 1
 
     #!!!!!!A PARTIR DE CE MOMENT LA, LES SPRITES DE F4 A UTILISER SERONT bras!!!!!!

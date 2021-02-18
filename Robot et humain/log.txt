@@ -1,8 +1,13 @@
+<<<<<<< Updated upstream
 Thu Feb 18 15:51:50 2021
+=======
+Thu Feb 18 18:04:14 2021
+>>>>>>> Stashed changes
 Windows-10-10.0.18362
 Ren'Py 7.4.2.1292
  
 
+<<<<<<< Updated upstream
 Bootstrap to the start of init.init took 0.05s
 Early init took 0.00s
 Loader init took 0.02s
@@ -482,3 +487,33 @@ While running game code:
   File "game/sbChemin2.rpy", line 2, in <module>
     if pasDeBras == True:
 NameError: name 'pasDeBras' is not defined
+=======
+Bootstrap to the start of init.init took 0.08s
+Early init took 0.01s
+Loader init took 0.01s
+Loading error handling took 0.14s
+Loading script took 2.01s
+Loading save slot metadata. took 0.03s
+Loading persistent took 0.00s
+Importing _renpysteam: ImportError('No module named _renpysteam',)
+Running init code took 0.18s
+Loading analysis data took 0.00s
+Analyze and compile ATL took 0.00s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\ash2o\\AppData\\Roaming/RenPy/backups\\Robot et humain':
+Dump and make backups. took 0.06s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.03s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.03s
+Save screen analysis took 0.07s
+Prepare screens took 0.13s
+Save pyanalysis. took 0.08s
+Save bytecode. took 0.03s
+>>>>>>> Stashed changes

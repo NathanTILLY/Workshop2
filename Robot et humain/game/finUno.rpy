@@ -76,8 +76,5 @@ label finUno:
 
 
         "Tu dois retourner auprès de tes parents":
-            r " Je ne peut pas Athenais, j'aimerai de tout mon coeur pouvoir te dre oui mais comme tu as pu le voir au longde ce trajet je ,e suis pas capable de te protéger.."
-            r "tu sera plus en sécurité là haut"
-            a "......."
-            a "D'accord ...... snif"
-            jump cable
+
+            jump finRamene

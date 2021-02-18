@@ -1,6 +1,4 @@
-image bg ville1 jour = "bg_ville1jour.png"
 
-image bg ville2 jour = "bg_ville2jour.png"
 
 define d = Character("D1-11T")
 
