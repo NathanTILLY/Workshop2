@@ -1,4 +1,4 @@
-Thu Feb 18 09:02:52 2021
+Thu Feb 18 10:29:17 2021
 Windows-10-10.0.18362
 Ren'Py 7.4.2.1292
  
@@ -19,7 +19,7 @@ Backing up script files to 'C:\\Users\\Game\\AppData\\Roaming/RenPy/backups\\Rob
 Dump and make backups. took 0.05s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
-Initial gc. took 0.02s
+Initial gc. took 0.01s
 DPI scale factor: 1.000000
 Creating interface object took 0.00s
 Cleaning stores took 0.00s
@@ -30,7 +30,7 @@ Analyze screens took 0.01s
 Save screen analysis took 0.05s
 Prepare screens took 0.04s
 Save pyanalysis. took 0.00s
-Save bytecode. took 0.02s
+Save bytecode. took 0.03s
 Running _start took 0.00s
 Performance test:
 Interface start took 0.08s
@@ -461,11 +461,4 @@ Texture testing:
 Screen sizes: virtual=(1280, 720) physical=(1739, 978) drawable=(1739, 978)
 Root FBO is: 0
 FBO Maximum Texture Size: 2048
-Total time until interface ready: 0.79349899292s
-Cleaning stores took 0.00s
-Init translation took 0.00s
-Build styles took 0.00s
-Load screen analysis took 0.01s
-Analyze screens took 0.00s
-Prepare screens took 0.00s
-Running _start took 0.00s
+Total time until interface ready: 0.813171863556s

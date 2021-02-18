@@ -279,7 +279,7 @@ label cachette:
 
                 p "Veuillez patienter quelques instants, nous allons procéder à des vérifications supplémentaires."
 
-                "*L’un des P6 appel discrètement une unité de S1.*"
+                "*L’un des P6 appelle discrètement une unité de S1.*"
 
                 "*Après quelques minutes, une patrouille de S1 arrive à la porte.*"
 
@@ -359,7 +359,7 @@ label cachette:
 
                 p "Veuillez patienter quelques instants, nous allons procéder à des vérifications supplémentaires."
 
-                "*L’un des P6 appel discrètement une unité de S1.*"
+                "*L’un des P6 appelle discrètement une unité de S1.*"
 
                 "*Après quelques minutes, une patrouille de S1 arrive à la porte.*"
 
@@ -370,12 +370,6 @@ label cachette:
 label suiteVerte:
 
     "*Lors de leur fuite, F4 se fait tirer dessus.*"
-
-    show robot neutre
-
-    $ perteDeBras = True
-
-    image robot neutre = "robot_minusbras.png"
 
     "*Blessé, F4 perd un bras dans sa course.*"
 
