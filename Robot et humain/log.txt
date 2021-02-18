@@ -1,4 +1,4 @@
-Thu Feb 18 11:04:08 2021
+Thu Feb 18 15:51:50 2021
 Windows-10-10.0.18362
 Ren'Py 7.4.2.1292
  
@@ -7,7 +7,7 @@ Bootstrap to the start of init.init took 0.05s
 Early init took 0.00s
 Loader init took 0.02s
 Loading error handling took 0.01s
-Loading script took 0.11s
+Loading script took 0.13s
 Loading save slot metadata. took 0.01s
 Loading persistent took 0.00s
 Importing _renpysteam: ImportError('No module named _renpysteam',)
@@ -30,7 +30,7 @@ Analyze screens took 0.01s
 Save screen analysis took 0.05s
 Prepare screens took 0.04s
 Save pyanalysis. took 0.00s
-Save bytecode. took 0.02s
+Save bytecode. took 0.03s
 Running _start took 0.00s
 Performance test:
 Interface start took 0.08s
@@ -458,14 +458,27 @@ Texture testing:
 - 512px textures work.
 - 1024px textures work.
 - 2048px textures work.
-Screen sizes: virtual=(1280, 720) physical=(1739, 978) drawable=(1739, 978)
+Screen sizes: virtual=(1280, 720) physical=(1387, 780) drawable=(1387, 780)
 Root FBO is: 0
 FBO Maximum Texture Size: 2048
-Total time until interface ready: 0.81698679924s
-Cleaning stores took 0.00s
-Init translation took 0.00s
-Build styles took 0.00s
-Load screen analysis took 0.01s
-Analyze screens took 0.00s
-Prepare screens took 0.00s
-Running _start took 0.00s
+Total time until interface ready: 0.797059059143s
+
+Full traceback:
+  File "game/sbChemin2.rpy", line 2, in script
+    if pasDeBras == True:
+  File "renpy/ast.py", line 1852, in execute
+    if renpy.python.py_eval(condition):
+  File "renpy/python.py", line 2249, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "renpy/python.py", line 2242, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/sbChemin2.rpy", line 2, in <module>
+    if pasDeBras == True:
+NameError: name 'pasDeBras' is not defined
+
+While running game code:
+  File "game/sbChemin2.rpy", line 2, in script
+    if pasDeBras == True:
+  File "game/sbChemin2.rpy", line 2, in <module>
+    if pasDeBras == True:
+NameError: name 'pasDeBras' is not defined

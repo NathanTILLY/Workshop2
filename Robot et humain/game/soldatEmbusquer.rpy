@@ -1,4 +1,8 @@
 label soldatEmbusquer:
+
+
+
+
     "PIOU"
     r "Aoutch"
     r " C'était quoi ça ?"
