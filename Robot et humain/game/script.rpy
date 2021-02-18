@@ -49,6 +49,8 @@ image bg ville1 jour = "bg_ville1jour.png"
 
 image bg ville2 jour = "bg_ville2jour.png"
 
+image bg abri = "bg_abri.png"
+
 image athenais neutre = "athenais_neutre.png"
 
 image athenais peur = "athenais_peur.png"

@@ -5,6 +5,7 @@ label avecbras:
         show athenais_neutre at left
         $ pasDeBras = False
         "*Après avoir passé la porte, F4 et Athénaïs arrivent dans l’ancienne ville humaine dans laquelle la nature a repris ses droits*"
+        play music "arc_2.mp3"
         menu:
             "Continuer à avancer":
 

@@ -1,5 +1,5 @@
 label fin3:
-
+    play music "les_autres_fins.mp3"
     "*Pendant la course, F4 vérifie l’endroit où il a reçu la balle il ne décèle rien de particulier et continue donc sa course*"
 
     "*Après quelques minutes de course F4 se rend compte que les S1 et les D1 ont arrêté dès les poursuivre. Il décide de vérifier l’endroit où il a reçu la balle mais ne décèle rien de particulier, il continue alors d’avancer vers le câble avec Athénaïs*"

@@ -28,7 +28,7 @@ label rapprochement:
     a "Ahahah ! F4 depuis quand tu sais danser ?"
 
     r "Je ne… dansais… pas… j’essayais seulement... de tenir tout... droit."
-
+    play sound "zapsplat_human_boy_3_years_old_british_laugh_004.mp3"
     a "Ahahah ! Tu prends tout au sérieux, t’es trop drôle !"
 
     "*Après ce moment de rigolade ils reprennent leur chemin vers le câble*"

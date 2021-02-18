@@ -5,6 +5,7 @@ label sansbras:
     show bg villedestroy
     show robot minusbras at right
     show athenais at right
+    play music "arc_2.mp3"
     "*Après avoir passé la porte, F4 et Athénaïs arrivent dans l’ancienne ville humaine dans laquelle la nature a repris ses droits*"
     $ timeout = 5.0
     $timeout_label = "timerUno"

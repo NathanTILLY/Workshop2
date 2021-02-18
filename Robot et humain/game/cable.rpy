@@ -40,6 +40,7 @@ label cable:
                 jump finFuite
             "Non":
                 label finRamene:
+                    play music "les_autres_fins.mp3"
 
                     r "Je… ne peux… pas… te garder… tes parents veulent… sûrement te… retrouver. Je ne… me sens pas… apte… et légitime... à m’occuper de toi"
 
@@ -56,6 +57,8 @@ label cable:
                     "*Le gérant de la ville et une dizaine de membres des forces de l’ordre arrivent sur les lieux, pour constater les faits.*"
 
                     r "Humain… je vous… ramène, un membre… de votre… clan qui était… malencontreusement… tombé de… votre cité."
+
+                    play sound "human_audience_laughter_comedy_club_x200_people_komedia_brighton_comic_boom_012.mp3"
 
                     "*Le gérant et les humains présent sur les lieux, éclatent de rire et se moque de F4*"
                     g "Stupide robot, cette gamine n’est pas malencontreusement tombée de notre cité, nous l’avons expulser. A qui appartient cette enfant ?"

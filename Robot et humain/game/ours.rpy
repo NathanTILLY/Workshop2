@@ -19,7 +19,7 @@ label ours:
         "Protéger Athénaïs de l’ours en la faisant reculer":
             $ timeout_label = None
             $ posture = True
-
+            play sound "animals_bear_growl_002.mp3"
             "*L’ours remarque que F4 se met en position de défense et il décide de protéger son territoire en sautant sur ce dernier. Il est projeté au sol.*"
 
             a "F4 ! Non !"
