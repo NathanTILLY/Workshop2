@@ -206,6 +206,8 @@ label cachette:
 
             "*Les P6-4D lancent une alarme qui alerte les S1 à proximité.*"
 
+            jump suiteVerte
+
 
         "*Mentir aux douaniers.*":
 
@@ -227,7 +229,7 @@ label cachette:
 
                     $ chanceDePasser = chanceDePasser + 10
 
-                p   "Hum, très bien et où amenez vous cette chose ?"
+            p   "Hum, très bien et où amenez vous cette chose ?"
 
             "*Il pointe l'enfant du doigt.*"
 
@@ -241,7 +243,7 @@ label cachette:
 
                     $ chanceDePasser = chanceDePasser + 30
 
-            a   "Ils me font peur"
+            a   "Ils me font peur..."
 
             "*Athénaïs pointe les douaniers du doigt.*"
 
@@ -253,9 +255,121 @@ label cachette:
 
                     $ chanceDePasser = chanceDePasser + 20
 
-                "\"C’est un... enfant, je... dois l’éliminer...\""
+                "\"C’est un... enfant, je... dois l’éliminer...\"":
 
                     $ chanceDePasser = chanceDePasser - 50
+
+            "*L’un des douaniers reçoit un appel.*"
+
+            "\"A toutes les unités, une unité F4 et un enfant sont en fuite.\""
+
+            if (chanceDePasser >= 50):
+
+                p   "Je crois qu'on les a laissés partir..."
+
+                p   "On prévient la centrale ?"
+
+                p   "On risque pas de se faire engueuler ?"
+
+                p   "Oups..."
+
+                jump suiteBleue
+
+            else:
+
+                p "Veuillez patienter quelques instants, nous allons procéder à des vérifications supplémentaires."
+
+                "*L’un des P6 appel discrètement une unité de S1.*"
+
+                "*Après quelques minutes, une patrouille de S1 arrive à la porte.*"
+
+                "*F4 les repère et commence à courir avec Athénaïs.*"
+
+                jump suiteVerte
+
+        "*Dire la vérité aux douaniers.*":
+
+            $ chanceDePasser = 50
+
+            p   "Veuillez vous identifier."
+
+            r   "Je suis l’unité F4... Numéro 112... De la brigade des récupérateurs..."
+
+            p   "Que faites-vous ici ?"
+
+            menu:
+
+                "\"Je... dois ramener... cette enfant... chez elle...\"":
+
+                    $ chanceDePasser = chanceDePasser + 10
+
+                "\"Je... dois passer... avec l’enfant...\"":
+
+                    $ chanceDePasser = chanceDePasser - 10
+
+            p   "Hum, très bien et où amenez vous cette chose ?"
+
+            "*Il pointe l'enfant du doigt.*"
+
+            menu:
+
+                "\"Je... la ramène à la... cité volante, pour... qu’elle retrouve... sa famille.\"":
+
+                    $ chanceDePasser = chanceDePasser + 30
+
+                "\"Je... dois la sortir... de la décharge.\"":
+
+                    $ chanceDePasser = chanceDePasser - 20
+
+            a   "Il est mignon lui avec sa tête."
+
+            "*Elle pointe l’un des douaniers du doigt.*"
+
+            p   "OH ! Merci bien petite chose !"
+
+            p   "Mais qu'est-ce qu'un enfant ?"
+
+            menu:
+
+                "\"Un... humain, qui ne doit... pas être la.\"":
+
+                    $ chanceDePasser = chanceDePasser - 50
+
+                "\"Un humain... fragile, qui a besoin... de sa famille.\"":
+
+                    $ chanceDePasser = chanceDePasser + 30
+
+            "*L’un des douaniers reçoit un appel.*"
+
+            "\"A toutes les unités, une unité F4 et un enfant sont en fuite.\""
+
+            if (chanceDePasser >= 50):
+
+                p   "Je crois qu'on les a laissés partir..."
+
+                p   "On prévient la centrale ?"
+
+                p   "On risque pas de se faire engueuler ?"
+
+                p   "Oups..."
+
+                jump suiteBleue
+
+            else:
+
+                p "Veuillez patienter quelques instants, nous allons procéder à des vérifications supplémentaires."
+
+                "*L’un des P6 appel discrètement une unité de S1.*"
+
+                "*Après quelques minutes, une patrouille de S1 arrive à la porte.*"
+
+                "*F4 les repère et commence à courir avec Athénaïs.*"
+
+                jump suiteVerte
+
+
+
+
 
 
 

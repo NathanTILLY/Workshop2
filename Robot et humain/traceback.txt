@@ -1,26 +1,22 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/label_01rencontre.rpy", line 226, in script
-    $ chanceDePasser = chanceDePasser + 10
-  File "game/label_01rencontre.rpy", line 226, in <module>
-    $ chanceDePasser = chanceDePasser + 10
-NameError: name 'chanceDePasser' is not defined
+  File "game/label_01rencontre.rpy", line 274, in script
+    jump suiteBleue
+ScriptError: could not find label 'suiteBleue'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/label_01rencontre.rpy", line 226, in script
-    $ chanceDePasser = chanceDePasser + 10
-  File "renpy/ast.py", line 922, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "renpy/python.py", line 2218, in py_exec_bytecode
-    exec(bytecode, globals, locals)
-  File "game/label_01rencontre.rpy", line 226, in <module>
-    $ chanceDePasser = chanceDePasser + 10
-NameError: name 'chanceDePasser' is not defined
+  File "game/label_01rencontre.rpy", line 274, in script
+    jump suiteBleue
+  File "renpy/ast.py", line 1711, in execute
+    rv = renpy.game.script.lookup(target)
+  File "renpy/script.py", line 900, in lookup
+    raise ScriptError("could not find label '%s'." % str(original))
+ScriptError: could not find label 'suiteBleue'.
 
 Windows-10-10.0.18362
 Ren'Py 7.4.2.1292
 Robot et humain 1.0
-Wed Feb 17 15:32:03 2021
+Thu Feb 18 08:36:02 2021
