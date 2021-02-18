@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/cable.rpy", line 80: is not terminated with a newline. (Check strings and parenthesis.)
-(Perhaps you left out a " at the end of the first line.)
-    “Athénaïs… Non ! Je dois… la… protéger"
+File "game/sansbras.rpy", line 58: expected statement.
+    "Aller dans le refuge à droite":
+                                   ^
 
 Ren'Py Version: Ren'Py 7.4.2.1292
-Thu Feb 18 10:56:04 2021
+Thu Feb 18 17:50:23 2021

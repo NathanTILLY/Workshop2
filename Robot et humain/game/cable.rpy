@@ -1,22 +1,44 @@
 define al = Character("Alerte", color = "#82040c")
-define g = Character("Gérant de la ville", color = "#588A66")
-define me = Character("Mère d'Athenais", color = "#d7f542")
-define pe = Character("Père d'Athenais", color = "#d7f542")
-define pa = Character("Parents d'Athenais", color = "#d7f542")
+define g = Character("Gérant ", color = "#588A66")
+define fe = Character("Mère ", color = "#d7f542")
+define pe = Character("Père ", color = "#d7f542")
+define pa = Character("Parents ", color = "#d7f542")
 
 label cable:
-    r "Nous voila arriver au cable..."
-    if pasDeBras == True:
-        r " Ah bah mince comment je t'envoie en haut c'est fermé"
-        r "je t'aurai bien ramener en grmipant mais je ne suis pas en état"
-        r "bon bah pas le choix je crois qu'il va falloir que tu reste avec moi Athenais"
-        a "Yes"
-        r "Ok ça marche vient on va s'installer dans la forêt"
-        a "YAY"
-        " HAPPY ENDING"
+    "*Après un certain temps de marche, ils arrivent enfin au câble, de peur Athénaïs se colle contre F4.*"
+
+    a "J’ai peur d’y retourner, je peux rester avec toi s’il te plaît F4 ?"
+
+    "F4 dans sa tête :"
+
+    r "Que dois-je répondre à ça ? Que dois-je faire ? Dois-je vraiment imposer mon choix ? Suis-je légitime à la garder ?"
+    r "Pourrais-je la protéger des dangers d’un monde qui m'est inconnu ? Peut-être que ses parents veulent la retrouver ? Sera-t-elle vraiment heureuse avec moi ?"
+
+    a "F4, tu fumes !"
+
+    r "Comment… ça ?"
+
+    a "Il y a de la fumée qui sort de ta tête !"
+
+    r "Pardon... je réfléchissais... à ta question… je pense te dire…que..."
+
+    if pasDeBras == True and jambe == True:
+        menu:
+            "Oui (pas le choix)":
+                jump finFuite
+    elif posture == True and pasDeBras == True:
+        menu:
+            "Oui (pas le choix)":
+                jump finFuite
+    elif jambe == True and posture == True:
+        menu:
+            "Oui (pas le choix)":
+                jump finFuite
     else:
         menu:
-            "Grimper au tube":
+            "Oui":
+                jump finFuite
+            "Non":
                 label finRamene:
 
                     r "Je… ne peux… pas… te garder… tes parents veulent… sûrement te… retrouver. Je ne… me sens pas… apte… et légitime... à m’occuper de toi"
@@ -66,7 +88,3 @@ label cable:
                     "*F4 implose sur le sol dans un bruit sourd laissant place, après le choc, à un silence pesant. Chacune des pièces de son corps se dispersent.*"
 
                     "*Pendant ce temps là, dans la cité volante. Athénaïs se fait capturer et amener à une capsule pour être expulsé une nouvelle fois dans les tréfonds du bas monde.*"
-
-
-            "Demander à Athenais de rester vivre avec F4":
-                jump finFuite
