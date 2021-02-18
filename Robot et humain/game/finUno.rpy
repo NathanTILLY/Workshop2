@@ -66,6 +66,7 @@ label finUno:
     menu:
         "Je veux rester avec toi":
             label finFuite:
+                play music "les_autres_fins.mp3"
                 r "Je ne veux… pas… t’abandonner, je… veux… rester avec toi"
 
                 "*Le visage de la fillette s’illumina de bonheur et de soulagement, elle était tellement heureuse d’avoir retrouvé une famille… Athénaïs se rue sur F4 pour l’enlacer. Des larmes se mettent à couler sur son visage, non pas de tristesse mais de soulagement et de joie.*"

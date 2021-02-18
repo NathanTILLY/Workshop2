@@ -198,6 +198,7 @@ label finTimerTimerUno1:
 
 
 label mortUno1:
+    play music "drone_timer_mort_du_robot_.mp3" fadeout 2
 
     "*F4 et Athénaïs commencent à courir à l’opposé du D1.*"
 

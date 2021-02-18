@@ -1,5 +1,5 @@
 label nuit:
-
+    play music "arc_1_1.mp3" fadeout 2
     a "Je préfère voyager de nuit, les vilains robots seront pas là n’est ce pas ?"
     r "Affirmatif…"
     show bg bonrefugeNuit
