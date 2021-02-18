@@ -1,12 +1,7 @@
-﻿python:
-    flag = True
-# Règle le timer sur un certain nombre de secondes. Peut-être modifié avec en plein milieu du code avec $timeout = 10.0 par exemple
+# PERMETTANT DE REALISER UN TIMER
+
 default timeout = 5.0
 
-# timeout_label renvoie au label vers lequel le joueur sera redirigé en cas de temps écoulé.
-# pour y assigner un label, écrivez $timeout_label = "start" par exemple
-# ne pas oublier de remettre le timeout_label à None pour ne pas que les futurs choix soient aussi timés.
-#Prenez en note qu'un nom de label doit être entre guillemets, mais pas None.
 default timeout_label = None
 
 default persistent.timed_choices = True
@@ -28,287 +23,179 @@ screen choice(items):
 
         timer timeout action Jump(timeout_label)
 
+# DEFINITION DE PERSONNAGES
 
-# Tout ça est à coller, de préférence au tout début du code.
-# Pour que votre choix sois timé, attribuez juste avant à votre timeout_label une valeur autre que None
-
-
-
-
-
-define n = Character("Narrateur", kind = nvl)
+define n = Character(kind = nvl)
 define c = Character("Choix")
-define r = Character("F4-112R")
-define a = Character("Athénaïs ")
-define m = Character("S1-25C")
-define p = Character("P6-4D")
+define r = Character("F4-112R", color = "#464CBD")
+define a = Character("Athénaïs", color = "#B361C9")
+define ath = Character("Fillette", color = "#B361C9")
+define m = Character("S1-25C", color = "#B0413E")
+define p = Character("P6-4D", color = "#588A66")
+
+# DEFINITION DES IMAGES
+
+image bg blanc = "bg_blanc.png"
+
+image bg noir = "bg_noir.png"
+
+image bg ville = "bg_ville.png"
+
+image bg villedestroy = "bg_villedestroy.png"
+
+image bg porte = "bg_porte.png"
+
+image athenais neutre = "athenais_neutre.png"
+
+image athenais peur = "athenais_peur.png"
+
+image athenais contente = "athenais_contente.png"
+
+image athenais triste = "athenais_triste.png"
+
+image robotbad neutre = "robotbad_neutre.png"
+
+image robotbad colere1 = "robotbad_colere1.png"
+
+image robotbad colere2 = "robotbad_colere2.png"
+
+image robotbad2 neutre = "robotbad_neutre.png"
+
+image robotbad2 colere1 = "robotbad_colere1.png"
+
+image robotbad2 colere2 = "robotbad_colere2.png"
+
+image douane neutre = "douane_neutre.png"
+
+image douane colere = "douane_colere.png"
+
+image douane2 neutre = "douane_neutre.png"
+
+image douane2 colere = "douane_colere.png"
+
+image drone neutre = "drone_neutre.png"
+
+image drone colere = "drone_colere.png"
+
+# SPRITES DE F4
+
+#NEUF
+
+image robot colere = "F4_colere.png"
+
+image robot gene = "F4_gene.png"
+
+image robot joie = "F4_joie.png"
+
+image robot neutre = "F4_neutre.png"
+
+image robot peur = "F4_peur.png"
+
+image robot triste = "F4_triste.png"
+
+# BRAS
+
+image robot bras colere = "F4_sansBras_colere.png"
+
+image robot bras gene = "F4_sansBras_gene.png"
+
+image robot bras joie = "F4_sansBras_joie.png"
+
+image robot bras neutre = "F4_sansBras_neutre.png"
+
+image robot bras peur = "F4_sansBras_peur.png"
+
+image robot bras triste = "F4_sansBras_triste.png"
+
+# JAMBE
+
+image robot jambe colere = "F4_sansJambe_colere.png"
+
+image robot jambe gene = "F4_sansJambe_gene.png"
+
+image robot jambe joie = "F4_sansJambe_joie.png"
+
+image robot jambe neutre = "F4_sansBras_neutre.png"
+
+image robot jambe peur = "F4_sansJambe_peur.png"
+
+image robot jambe triste = "F4_sansJambe_triste.png"
+
+# DOS
+
+image robot dos colere = "F4_dosCasse_colere.png"
+
+image robot dos gene = "F4_dosCasse_gene.png"
+
+image robot dos joie = "F4_dosCasse_joie.png"
+
+image robot dos neutre = "F4_dosCasse_neutre.png"
+
+image robot dos peur = "F4_dosCasse_peur.png"
+
+image robot dos triste = "F4_dosCasse_triste.png"
+
+# BRAS JAMBE
+
+image robot bras jambe colere = "F4_sansJambe_sansBras_colere.png"
+
+image robot bras jambe gene = "F4_sansJambe_sansBras_gene.png"
+
+image robot bras jambe joie = "F4_sansJambe_sansBras_joie.png"
+
+image robot bras jambe neutre = "F4_sansJambe_sansBras_neutre.png"
+
+image robot bras jambe peur = "F4_sansJambe_sansBras_peur.png"
+
+image robot bras jambe triste = "F4_sansJambe_sansBras_triste.png"
+
+# BRAS DOS
+
+image robot bras dos colere = "F4_dosCasse_sansBras_colere.png"
+
+image robot bras dos gene = "F4_dosCasse_sansBras_gene.png"
+
+image robot bras dos joie = "F4_dosCasse_sansBras_joie.png"
+
+image robot bras dos neutre = "F4_dosCasse_sansBras_neutre.png"
+
+image robot bras dos peur = "F4_dosCasse_sansBras_peur.png"
+
+image robot bras dos triste = "F4_dosCasse_sansBras_triste.png"
+
+# JAMBE DOS
+
+image robot jambe dos colere = "F4_dosCasse_sansJambe_colere.png"
+
+image robot jambe dos gene = "F4_dosCasse_sansJambe_gene.png"
+
+image robot jambe dos joie = "F4_dosCasse_sansJambe_joie.png"
+
+image robot jambe dos neutre = "F4_dosCasse_sansJambe_neutre.png"
+
+image robot jambe dos peur = "F4_dosCasse_sansJambe_peur.png"
+
+image robot jambe dos triste = "F4_dosCasse_sansJambe_triste.png"
+
+# BRAS JAMBE DOS
+
+image robot bras jambe dos colere = "F4_dosCasse_sansBras_sans_Jambe_colere.png"
+
+image robot bras jambe dos gene = "F4_dosCasse_sansBras_sans_Jambe_gene.png"
+
+image robot bras jambe dos joie = "F4_dosCasse_sansBras_sans_Jambe_joie.png"
+
+image robot bras jambe dos neutre = "F4_dosCasse_sansBras_sans_Jambe_neutre.png"
+
+image robot bras jambe dos peur = "F4_dosCasse_sansBras_sans_Jambe_peur.png"
+
+image robot bras jambe dos triste = "F4_dosCasse_sansBras_sans_Jambe_triste.png"
+
+# FLAGS
 
 
 label start:
 
-    scene bg ville
+    jump rencontre
 
-
-
-    n "Année 3100"
-
-    n "Elkjaer, dernier bastion de l'humanité"
-
-    n "Athenais se fait yeet de la cité et attérit en bas"
-
-    nvl clear
-
-    play sound "tumbleweed-sound-effect-hq.mp3"
-
-    scene bg decharge
-
-    show robot normal at right
-
-    r "Ouah zebi un humain ... Qu'est ce que je fait avec ça ????"
-
-    show athenais at left
-
-
-
-    define menu = menu
-
-    menu:
-
-        c "Que faire de l'humain ?"
-
-        "Récupérer l'enfant pour l'élever":
-            r "Salut moi c'est F4-112R"
-            r "Mhh ça à pas l'air facile pour toi aller je vais te prendre avec moi"
-            a "Ca marche"
-
-        "La laisser":
-            a "Prend moi avec toi ou je te suis partout"
-            r " bon ok"
-
-
-    r "Bon allez vient on va se balader"
-
-    show athenais at right
-
-    show robot normal at right
-
-    show robotbad at center
-
-    r "Oh fuck un robot soldat"
-
-    m "Blood for the blood god"
-
-
-
-    menu:
-
-        c "Que faire ?"
-
-        "Fuire":
-            r "taille Athenais taille taille taille"
-            show athenais at left
-
-            show robot normal at left
-
-            m "Je vais vous fumer"
-
-            r "Ah fuck il nous as vu cache toi dans cette botte de paille Athenais"
-
-            show paille at left
-
-            m "?????"
-
-            m "Bah alors ils sont passé où"
-
-            hide robotbad
-
-            r "..."
-            r "Il à l'air d'être partit"
-
-            hide paille
-
-            r "Ok goh continuer de se balader"
-
-        "Se cacher":
-            r "Viens on va se cacher dans cette botte de paille Athenais"
-
-            show paille at right
-
-            m "MHHHH rien a voir ici"
-
-            hide robotbad
-            r "..."
-            r "Il à l'air d'être partit"
-
-            hide paille
-
-            r "Ok goh continuer de se balader"
-
-    n "Après quelques heures de marche Athenais et F4-112R arrive devant une porte garder par un robot douanier"
-
-    show bg porte
-
-    show athenais at left
-
-    show robot normal at left
-
-    show robotdoaunier at center
-
-    r "Salut mec tu nous laisse passer stp ?"
-
-    p "Que venez vous faire ici ?"
-    $ pasDeBras = False
-    menu:
-        "Dire la vérité":
-            r "Je souhaite passer afin de ramener cette enfant chez elle"
-            a "..."
-            p"mhhh"
-            p"et d'où elle vient cette enfant ?"
-            menu:
-                "de la cité des humains":
-                    r "Elle vient de chez les humains habitant au dessus"
-                    p "ouais ça fait du sens vous pouvez passer"
-
-                    jump avecbras
-
-                "je l'ai trouvé":
-                    $ pasDeBras = True
-                    r "je l'ai trouvé dans une benne pas loin"
-                    p "..."
-                    p "tu te paie ma tronche gringo ???"
-                    p "A toutes les unités ici P6-4D en charge de la porte 45B renégat repéré envoyer des renforts"
-
-                    r "Oh la poucave vient Athenais on passe en force"
-
-                    p "tu ne va nul part !"
-                    hide bg porte
-                    hide athenais
-                    hide robot normal
-                    hide robotdoaunier
-
-                    show bg white
-                    with Dissolve(1)
-
-                    pause .5
-
-                    r "Argh"
-
-                    show bg porte
-                    with Dissolve(1)
-
-                    show athenais at right
-
-                    show robot minusbras at right
-
-                    a "F4-112R ! Ton bras !"
-
-                    r "t'en occupe pas Athenais continue de courir"
-
-                    hide athenais
-                    hide robot minusbras
-
-                    show robotdoaunier at center
-
-                    p "..."
-                    p "A toutes les unités le renégat se dirige vers la cité des humains"
-
-                    jump sansbras
-
-        "Mentir":
-            r "Je souhaite passer afin de ramener cette enfant chez mon employeur"
-            a "..."
-            p "mhhh"
-            p "et c'est qui votre employeur ?"
-            menu:
-                "réponse fun":
-                    $ pasDeBras = True
-                    r "J34n C45t3X"
-                    p "..."
-                    p "tu te paie ma tronche gringo ???"
-                    p "A toutes les unités ici P6-4D en charge de la porte 45B renégat repéré envoyer des renforts"
-
-                    r "Oh la poucave vient Athenais on passe en force"
-
-                    p "tu ne va nul part !"
-                    hide bg porte
-                    hide athenais
-                    hide robot normal
-                    hide robotdoaunier
-
-                    show bg white
-                    with Dissolve(1)
-
-                    pause .5
-
-                    r "Argh"
-
-                    show bg porte
-                    with Dissolve(1)
-
-                    show athenais at right
-
-                    show robot minusbras at right
-
-                    a "F4-112R ! Ton bras !"
-
-                    r "t'en occupe pas Athenais continue de courir"
-
-                    hide athenais
-                    hide robot minusbras
-
-                    show robotdoaunier at center
-
-                    p "..."
-                    p "A toutes les unités le renégat se dirige vers la cité des humains"
-
-                    jump sansbras
-                "réponse sérieuse":
-                    r "je vais livrer à C4B32 il a besoin de biocarburant pour un projet"
-                    p "ouais ça fait du sens vous pouvez passer"
-
-                    jump avecbras
-
-        "Passer en force":
-            $ pasDeBras = True
-            r "Frérot t'a déjà entendu parler de l"
-            r "DERRIERE TOI !!!"
-            p "mmmmh?"
-            r "taille taille taille Athenais on trace !"
-
-            p "tu ne va nul part !"
-            hide bg porte
-            hide athenais
-            hide robot normal
-            hide robotdoaunier
-
-            show bg white
-            with Dissolve(1)
-
-            pause .5
-
-            r "Argh"
-
-            show bg porte
-            with Dissolve(1)
-
-            show athenais at right
-
-            show robot minusbras at right
-
-            a "F4-112R ! Ton bras !"
-
-            r "t'en occupe pas Athenais continue de courir"
-
-            hide athenais
-            hide robot minusbras
-
-            show robotdoaunier at center
-
-            p "..."
-            p "A toutes les unités le renégat se dirige vers la cité des humains"
-            hide robotdouanier
-            jump sansbras
-
-
-
-    return
+return

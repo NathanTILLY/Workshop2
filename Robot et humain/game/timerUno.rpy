@@ -56,7 +56,7 @@ label timerUno:
                                 "se cacher dans un tas de déchet":
                                     a " go se planquer sous un tas de déchet"
                                     r "ok"
-                                    jump Cachette
+                                    jump cacher
                         "Courir":
                             r " Huf huf"
                             r " t'arrete pas de courir Athenais"

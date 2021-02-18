@@ -1,4 +1,4 @@
-label cachette:
+label cacher:
 
     show robotbad
     m "ici l'unité S1-25C j'ai perdu la trace de la cible"
