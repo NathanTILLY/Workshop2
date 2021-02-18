@@ -2,33 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 100: expected ':' not found.
-    else if (perteDeBras && !perteDeJambe && !perteDeDos):
-         ^
-
-File "game/script.rpy", line 116: expected statement.
-    else if (!perteDeBras && perteDeJambe && !perteDeDos):
-         ^
-
-File "game/script.rpy", line 132: expected statement.
-    else if (!perteDeBras && !perteDeJambe && perteDeDos):
-         ^
-
-File "game/script.rpy", line 148: expected statement.
-    else if (perteDeBras && perteDeJambe && !perteDeDos):
-         ^
-
-File "game/script.rpy", line 164: expected statement.
-    else if (perteDeBras && !perteDeJambe && perteDeDos):
-         ^
-
-File "game/script.rpy", line 180: expected statement.
-    else if (!perteDeBras && perteDeJambe && perteDeDos):
-         ^
-
-File "game/script.rpy", line 196: expected statement.
-    else if (perteDeBras && perteDeJambe && perteDeDos):
-         ^
+File "game/timerUno.rpy", line 141: choice menuitem expects a non-empty block.
+    "*Fuir.*":
+              ^
 
 Ren'Py Version: Ren'Py 7.4.2.1292
-Thu Feb 18 10:11:25 2021
+Thu Feb 18 15:51:30 2021

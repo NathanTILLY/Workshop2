@@ -1,9 +1,12 @@
 label rencontre:
 
-    scene bg ville
+    scene bg epilogue
 
     n   "En l’an 3000, à la suite d’une rébellion des robots, les humains ont dû se réfugier dans des cités volantes. Notre histoire se déroule un siècle plus tard au pied de la cité Elkjaer."
     n   "Le gouvernement en place à mis en œuvre une politique d'enfant unique suite à la surpopulation de la ville. Dès leur plus jeune âge, les enfants se font éjecter dans les tréfonds du bas monde."
+
+    scene bg ville
+
     n   "Dans ce monde où la présence humaine n'est plus, les robots sont maîtres : ils se servent des \"offrandes\" du monde d'en haut pour survivre."
     n   "Ils récupèrent les capsules dans lesquelles se trouvent les enfants, puis ils utilisent leur énergie vitale comme combustible pour leur propre survie."
 
