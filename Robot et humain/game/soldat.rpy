@@ -1,16 +1,37 @@
 label soldat:
+
+    if pasDeBras == True:
+        show robot bras joie at left
+    else:
+        show robot joie at left
+    show athenais joie at right
+
     r "*On peut… y aller… si tu veux.*"
 
     a "Ouais ! Trop bien, je t’adore F4"
 
     "*Athénaïs cours vers les jeux et commence à s’amuser, F4 la suit pour la regarder jouer*"
 
+    if pasDeBras == True:
+        show robot bras colere at left
+    else:
+        show robot colere at left
+
     "*Après quelques instants, F4 aperçoit un groupe de S1 au loin*"
+
     $ timeout = 3.0
     $timeout_label = "soldatEmbusquer"
     menu:
 
         "essayer de s'enfuir":
+
+            if pasDeBras == True:
+                show robot bras peur at right
+            else:
+                show robot peur at right
+            show athenais peur
+
+
             $timeout_label = None
             "*Prendre Athénaïs par la main et courir*"
 
@@ -27,6 +48,13 @@ label soldat:
             jump soldatEmbusquer
         "essaie de masquer sa présence":
             $timeout_label = None
+
+            if pasDeBras == True:
+                show robot bras peur at right
+            else:
+                show robot peur at right
+            show athenais peur
+
 
             "*Prévenir Athénaïs et se cacher*"
 

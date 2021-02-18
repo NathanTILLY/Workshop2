@@ -1,5 +1,13 @@
 label ours:
 
+    if pasDeBras == True:
+        show robot bras peur at left
+    else:
+        show robot peur at left
+    show athenais peur at left behind robot
+
+    show ours repos at right
+
 
     "*Ils entrent dans un bâtiment en vitesse pour échapper au drone. Mais ils tombent nez à nez avec un ours, ils doivent réagir vite.*"
     $ timeout = 3.0
@@ -20,12 +28,16 @@ label ours:
             $ timeout_label = None
             $ posture = True
 
+            show ours colere at right
+
             "*L’ours remarque que F4 se met en position de défense et il décide de protéger son territoire en sautant sur ce dernier. Il est projeté au sol.*"
 
             a "F4 ! Non !"
             "*F4 trouve un morceau de métal à côté de lui et frappe l’ours avec pour s’échapper des griffes de celui-ci*"
 
             "*Lorsque F4 s’en sort, il prend Athénaïs par la main et commence à courir, difficilement, avec elle*"
+
+            hide ours
 
 
             jump enfantAttaque
@@ -34,8 +46,13 @@ label ours:
 label timerours:
     $ posture = True
     $ timeout_label = None
+
+    show ours colere at right
+
     "*L’ours se jette sur Athénaïs, mais F4 s’interpose pour la protéger. Il est projeté au sol.*"
     "*F4 trouve un morceau de métal à côté de lui et frappe l’ours avec pour s’échapper des griffes de celui-ci*"
 
     "*Lorsque F4 s’en sort, il prend Athénaïs par la main et commence à courir, difficilement, avec elle*"
+
+    hide ours
 jump enfantAttaque

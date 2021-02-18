@@ -43,6 +43,8 @@ image bg ville = "bg_ville.png"
 
 image bg villedestroy = "bg_villedestroy.png"
 
+image bg abri = "bg_abri.png"
+
 image bg porte = "bg_porte.png"
 
 image bg ville1 jour = "bg_ville1jour.png"
@@ -80,6 +82,10 @@ image douane2 colere = "douane_colere.png"
 image drone neutre = "drone_neutre.png"
 
 image drone colere = "drone_colere.png"
+
+image ours repos = "ours_repos.png"
+
+image ours colere = "ours_colere.png"
 
 # SPRITES DE F4
 

@@ -3,7 +3,7 @@
 label sansbras:
     $ pasDeBras = True
     show bg ville1 jour
-    show robot bras neutre at right
+    show robot bras neutre at left
     show athenais neutre at right
     "*Après avoir passé la porte, F4 et Athénaïs arrivent dans l’ancienne ville humaine dans laquelle la nature a repris ses droits*"
     $ timeout = 5.0
@@ -32,16 +32,19 @@ label sansbras:
 
             "*F4 active son système auto chauffant*"
 
-            show athenais joie
+            show athenais contente
 
             a "C’est bien mieux comme ça !"
 
             "*Quelques minutes de marche plus tard, F4 inquiet de ses poursuivants, lance des regards de temps à autre derrière lui. Jusqu’au moment où il arrive à discerner des S1 derrière lui*"
 
-            show
+            show robot bras peur
 
             menu:
                 "*Courir pour les semer*":
+
+                    show athenais peur
+
                     "*Athénaïs se retourne et voit les S1*"
 
                     a "F4, les méchants robots sont derrière nous il faut courir !"
@@ -56,6 +59,8 @@ label sansbras:
 
                     r "Viens petite… il ne faut pas… qu’ils nous voient."
 
+                    show athenais peur
+
 
                     "*Après avoir éviter les S1, F4 et Athénaïs continuent leur route et ils arrivent dans une grande étendue au milieu d’arbres et de hautes herbes*"
 
@@ -64,7 +69,10 @@ label sansbras:
 
         "Aller dans le refuge à droite":
 
+
             r "Allons...à droite… j’ai un bon... pressentiment… "
+
+            show bg abri
 
 
             "*F4 et Athénaïs après quelques minutes de marche arrivent au fameux refuge que F4 avait repéré*"
@@ -78,6 +86,7 @@ label sansbras:
             menu:
                 "Prendre les escaliers":
 
+                    show
 
                     "*Après avoir monté les escaliers F4 et Athénaïs arrivent dans une grande étendue au milieu d’arbres et de hautes herbes*"
 

@@ -5,11 +5,24 @@ define pe = Character("Père ", color = "#d7f542")
 define pa = Character("Parents ", color = "#d7f542")
 
 label cable:
+
+    if pasDeBras == True:
+        show robot bras neutre at right
+    else:
+        show robot neutre at right
+    show athenais peur at right behind robot
+
+
     "*Après un certain temps de marche, ils arrivent enfin au câble, de peur Athénaïs se colle contre F4.*"
 
     a "J’ai peur d’y retourner, je peux rester avec toi s’il te plaît F4 ?"
 
     "F4 dans sa tête :"
+
+    if pasDeBras == True:
+        show robot bras gene at right
+    else:
+        show robot gene at right
 
     r "Que dois-je répondre à ça ? Que dois-je faire ? Dois-je vraiment imposer mon choix ? Suis-je légitime à la garder ?"
     r "Pourrais-je la protéger des dangers d’un monde qui m'est inconnu ? Peut-être que ses parents veulent la retrouver ? Sera-t-elle vraiment heureuse avec moi ?"
@@ -21,6 +34,8 @@ label cable:
     a "Il y a de la fumée qui sort de ta tête !"
 
     r "Pardon... je réfléchissais... à ta question… je pense te dire…que..."
+
+
 
     if pasDeBras == True and jambe == True:
         menu:
@@ -41,6 +56,12 @@ label cable:
             "Non":
                 label finRamene:
 
+                    if pasDeBras == True:
+                        show robot bras triste at right
+                    else:
+                        show robot triste at right
+                    show athenais triste at right behind robot
+
                     r "Je… ne peux… pas… te garder… tes parents veulent… sûrement te… retrouver. Je ne… me sens pas… apte… et légitime... à m’occuper de toi"
 
                     a "Mais je ne veux pas y retourner... Je veux rester avec toi"
@@ -51,13 +72,34 @@ label cable:
 
                     al "Avis à toute la population, un robot gravit le câble Gamma. Rester chez vous, ne sortez pas, je répète rester chez vous, ne sortez pas."
 
+                    if pasDeBras == True:
+                        show robot bras peur at right
+                    else:
+                        show robot peur at right
+                    show athenais peur at right behind robot
+
+                    show bg ville
+
                     "*Les humains intrigués par ce qu’il se passe se ruent en masse au câble Gamma prêt à accueillir le robot. Dès que F4 arrive en haut de celui-ci, il aperçoit une foule d'humains. Certains sont paniqués et d'autres intrigués.*"
 
                     "*Le gérant de la ville et une dizaine de membres des forces de l’ordre arrivent sur les lieux, pour constater les faits.*"
 
+                    if pasDeBras == True:
+                        show robot neutre peur at right
+                    else:
+                        show robot neutre at right
+                    show athenais neutre at right behind robot
+
                     r "Humain… je vous… ramène, un membre… de votre… clan qui était… malencontreusement… tombé de… votre cité."
 
                     "*Le gérant et les humains présent sur les lieux, éclatent de rire et se moque de F4*"
+
+                    if pasDeBras == True:
+                        show robot neutre triste at right
+                    else:
+                        show robot triste at right
+                    show athenais triste at right behind robot
+
                     g "Stupide robot, cette gamine n’est pas malencontreusement tombée de notre cité, nous l’avons expulser. A qui appartient cette enfant ?"
 
                     "*Un couple s’avance et reconnaissent qu’elle était leur fille*"
@@ -67,6 +109,12 @@ label cable:
                     g "Vous osez contester mon autorité ? Vous osez vous rebeller ?"
 
                     pa "Non… Nous acceptons notre sort…"
+
+                    if pasDeBras == True:
+                        show robot neutre colere at right
+                    else:
+                        show robot colere at right
+                    show athenais peur at right behind robot
 
                     fe "Tu ne nous auras apporté que du malheur, j’aurais aimé ne jamais t’avoir mise au monde ! "
                     "*En pointant Athénaïs*"
@@ -78,6 +126,12 @@ label cable:
 
                     r "En réalité… c’est vous… les… monstres."
                     "*F4 tente tant bien que mal de se défendre et de sauver Athénaïs. Mais les autorités étant trop nombreuse prirent le dessus et expulsent ce dernier*"
+
+                    hide robot
+
+                    hide athenais
+
+                    show bg noir
 
                     r "Athénaïs… Non ! Je dois… la… protéger"
 
