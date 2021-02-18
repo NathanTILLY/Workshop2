@@ -11,7 +11,7 @@ label rencontre:
 
     scene bg villedestroy
 
-    play sound "tumbleweed-sound-effect-hq.mp3"
+
 
     show robot triste at center
 
@@ -475,6 +475,7 @@ label suiteVerte:
     show athenais peur
 
     "*Blessé, F4 perd un bras dans sa course.*"
+    $ pasDeBras = True
 
     "*Il commence alors à laisser une trace d'huile derrière lui, indiquant sa direction.*"
 

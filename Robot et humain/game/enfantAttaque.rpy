@@ -4,23 +4,25 @@ label enfantAttaque:
     else:
         show robot minusbras at right
     show athenais at right
-    r " je pense qu'on est bientot arrivé Athenais"
-    a " Oui j'imagine ..."
-    r " Qu'est ce qu'il ne va p.. !!!"
-    show drone at center
-    d " renégat repéré. Récupération du biocarburant"
-    r "Athenais attention"
+
+    "*F4 et Athénaïs se rapprochent de plus en plus du câble si bien qu’il parait immense. La petite fille tellement émerveillée avance sans se soucier de ce qu’il y a autour d’elle. A cause de ce manque d’attention un drone surgit et lui saute dessus*"
+
+    "Attention !"
+
     menu:
-        "se précipiter pour la sauver":
-            r "Rah laisse là"
-            "Chomp"
-            r " Argh"
-            a "F4!!"
-            r "viens Athenais on trace"
+        "Se précipiter pour la sauver":
+            $ jambe = True
+            "*F4 se rue sur le drone mais ce dernier étant à l'affût saute sur la jambe de F4, et la lacère de part en part. Le drone arrache la jambe du robot mais celui-ci lui donne un coup qui lui est fatal.*"
+
+            a "F4, ta jambe…"
+
+            r "Je t’ai... protégé c’est... le plus important"
+
             jump cable
-        "attendre le bon moment pour intervenir":
-            r "wait wait"
-            r "Maintenant !!"
-            "BONK"
-            r "viens Athenais on trace"
+        "*Attendre le bon moment*":
+            "*F4 analyse la situation, et au moment où le drone relâche son attention il l’embroche de sa main et le détruit*"
+
+            a"Merci F4, tu es mon sauveur"
+            "*En lui sautant dans le bras*"
+
             jump cable

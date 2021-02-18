@@ -2,9 +2,21 @@
 errors listed below, and try again.
 
 
-File "game/cable.rpy", line 80: is not terminated with a newline. (Check strings and parenthesis.)
-(Perhaps you left out a " at the end of the first line.)
-    “Athénaïs… Non ! Je dois… la… protéger"
+File "game/cable.rpy", line 24: if statement expects a non-empty block.
+    if pasDeBras == True and jambe == True:
+                                           ^
+
+File "game/cable.rpy", line 25: expected statement.
+    elif posture == True and pasDeBras == True:
+                 ^
+
+File "game/cable.rpy", line 26: expected statement.
+    elif jambe == True and posture == True:
+               ^
+
+File "game/cable.rpy", line 30: expected statement.
+    else:
+        ^
 
 Ren'Py Version: Ren'Py 7.4.2.1292
-Thu Feb 18 10:56:04 2021
+Thu Feb 18 15:30:09 2021
