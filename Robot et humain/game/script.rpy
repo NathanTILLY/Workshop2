@@ -53,10 +53,6 @@ image athenais contente = "athenais_contente.png"
 
 image athenais triste = "athenais_triste.png"
 
-image robot neutre = "robot_neutre.png"
-
-image robot manchot = "robot_minusbras.png"
-
 image robotbad neutre = "robotbad_neutre.png"
 
 image robotbad colere1 = "robotbad_colere1.png"
@@ -81,9 +77,121 @@ image drone neutre = "drone_neutre.png"
 
 image drone colere = "drone_colere.png"
 
-# DEFINITION DE VARIABLES DIVERSES
+# SPRITES DE F4
 
-$ chanceDePasser = 50
+#NEUF
+
+image robot colere = "F4_colere.png"
+
+image robot gene = "F4_gene.png"
+
+image robot joie = "F4_joie.png"
+
+image robot neutre = "F4_neutre.png"
+
+image robot peur = "F4_peur.png"
+
+image robot triste = "F4_triste.png"
+
+# BRAS
+
+image robot bras colere = "F4_sansBras_colere.png"
+
+image robot bras gene = "F4_sansBras_gene.png"
+
+image robot bras joie = "F4_sansBras_joie.png"
+
+image robot bras neutre = "F4_sansBras_neutre.png"
+
+image robot bras peur = "F4_sansBras_peur.png"
+
+image robot bras triste = "F4_sansBras_triste.png"
+
+# JAMBE
+
+image robot jambe colere = "F4_sansJambe_colere.png"
+
+image robot jambe gene = "F4_sansJambe_gene.png"
+
+image robot jambe joie = "F4_sansJambe_joie.png"
+
+image robot jambe neutre = "F4_sansBras_neutre.png"
+
+image robot jambe peur = "F4_sansJambe_peur.png"
+
+image robot jambe triste = "F4_sansJambe_triste.png"
+
+# DOS
+
+image robot dos colere = "F4_dosCasse_colere.png"
+
+image robot dos gene = "F4_dosCasse_gene.png"
+
+image robot dos joie = "F4_dosCasse_joie.png"
+
+image robot dos neutre = "F4_dosCasse_neutre.png"
+
+image robot dos peur = "F4_dosCasse_peur.png"
+
+image robot dos triste = "F4_dosCasse_triste.png"
+
+# BRAS JAMBE
+
+image robot bras jambe colere = "F4_sansJambe_sansBras_colere.png"
+
+image robot bras jambe gene = "F4_sansJambe_sansBras_gene.png"
+
+image robot bras jambe joie = "F4_sansJambe_sansBras_joie.png"
+
+image robot bras jambe neutre = "F4_sansJambe_sansBras_neutre.png"
+
+image robot bras jambe peur = "F4_sansJambe_sansBras_peur.png"
+
+image robot bras jambe triste = "F4_sansJambe_sansBras_triste.png"
+
+# BRAS DOS
+
+image robot bras dos colere = "F4_dosCasse_sansBras_colere.png"
+
+image robot bras dos gene = "F4_dosCasse_sansBras_gene.png"
+
+image robot bras dos joie = "F4_dosCasse_sansBras_joie.png"
+
+image robot bras dos neutre = "F4_dosCasse_sansBras_neutre.png"
+
+image robot bras dos peur = "F4_dosCasse_sansBras_peur.png"
+
+image robot bras dos triste = "F4_dosCasse_sansBras_triste.png"
+
+# JAMBE DOS
+
+image robot jambe dos colere = "F4_dosCasse_sansJambe_colere.png"
+
+image robot jambe dos gene = "F4_dosCasse_sansJambe_gene.png"
+
+image robot jambe dos joie = "F4_dosCasse_sansJambe_joie.png"
+
+image robot jambe dos neutre = "F4_dosCasse_sansJambe_neutre.png"
+
+image robot jambe dos peur = "F4_dosCasse_sansJambe_peur.png"
+
+image robot jambe dos triste = "F4_dosCasse_sansJambe_triste.png"
+
+# BRAS JAMBE DOS
+
+image robot bras jambe dos colere = "F4_dosCasse_sansBras_sans_Jambe_colere.png"
+
+image robot bras jambe dos gene = "F4_dosCasse_sansBras_sans_Jambe_gene.png"
+
+image robot bras jambe dos joie = "F4_dosCasse_sansBras_sans_Jambe_joie.png"
+
+image robot bras jambe dos neutre = "F4_dosCasse_sansBras_sans_Jambe_neutre.png"
+
+image robot bras jambe dos peur = "F4_dosCasse_sansBras_sans_Jambe_peur.png"
+
+image robot bras jambe dos triste = "F4_dosCasse_sansBras_sans_Jambe_triste.png"
+
+# FLAGS
 
 
 label start:

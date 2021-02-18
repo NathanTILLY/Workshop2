@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-The label cachette is defined twice, at
-  File "game/cachette.rpy", line 1 and
-  File "game/label_01rencontre.rpy", line 149.
+File "game/cable.rpy", line 80: is not terminated with a newline. (Check strings and parenthesis.)
+(Perhaps you left out a " at the end of the first line.)
+    “Athénaïs… Non ! Je dois… la… protéger"
 
 Ren'Py Version: Ren'Py 7.4.2.1292
-Wed Feb 17 17:52:50 2021
+Thu Feb 18 10:56:04 2021

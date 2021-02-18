@@ -1,9 +1,9 @@
 
 label avecbras:
-        show bg villedestroy
-        show robot normal at right
-        show athenais at right
-        r "ok on est good"
+        #show bg exterieurun
+        show robot_neutre at left
+        show athenais_neutre at left
+        "*Après avoir passé la porte, F4 et Athénaïs arrivent dans l’ancienne ville humaine dans laquelle la nature a repris ses droits*"
         menu:
             "Continuer à avancer":
 
@@ -25,7 +25,7 @@ label avecbras:
                                 jump fauneFlore
 
 
-            "Se reposer dans un refuge médiocre":
+            "Aller dans le refuge à droite":
                 r "Oh regarde une cabane destroy"
                 r "go faire une petite pause"
                 a "ça marche"
@@ -49,16 +49,59 @@ label avecbras:
                                 jump drone
 
 
-            "Se reposer dans un refuge sympa":
-                r "ça à l'air cozy ici on va se reposer là"
-                d " je l'ai ait vu dans le coin il doivent être plus loin"
-                r " eh beh qusqu'on fait du coup"
+            "Aller dans le refuge à gauche":
+                r" Allons...à gauche… mes sens de robot… m’indique un bon… refuge par là bas."
+
+                "*Athénaïs tend sa main à F4*"
+
+                r "Pourquoi… Me tends-tu… Ta main… Athénaïs?"
+
+                a "Mes parents me tenaient la main pour me réconforter"
+
+                "*F4 prend la main d’Athénaïs*"
+
+                a " AH ! Mais ta main est super froide !"
+
+                r "Pardon...attends quelques secondes"
+
+                "*F4 active son système auto chauffant*"
+
+                a "C’est bien mieux comme ça !"
+
+                "*F4 et Athénaïs après quelques minutes de marche arrivent au fameux refuge que F4 avait repéré*"
+                show bg bonrefuge
+                r "On va... pouvoir se reposer…. un peu ici"
+
+                "*F4 prend Athénaïs dans ses bras et l’assoie sur le fauteuil/canapé*"
+
+                "*Scouik Scouik*"
+
+                a "AAAHH ! Au secours, qu’est ce que c’est que ça !?"
+
+                "*F4 analyse la créature qui vient de terroriser la fillette*"
+
+                r "Analyse terminée… c’est seulement… un rat… une petite créature inoffensive…"
+
+                a "Ah ouf j’ai eu peur, j’ai cru que…"
+
+                r "Chut ! Un drone... Cache toi… Et ne fais pas... De bruit"
+                hide athenais_neutre
+                hide robot_neutre
+                #show bg exeterieurun
+                show drone_loin at center
+
+                "*F4 regarde par le seul trou de lumière qui donne sur l’extérieur et aperçoit le drone passer au loin*"
+
+                hide drone
+                show bg bonrefuge
+                show athenais_neutre at right
+                show robot_neutre at left
+                r "Athénaïs… préfère tu… partir maintenant ?... ou attendre… que la nuit tombe ? "
+
                 menu:
                     "voyager de jour":
-                        r " vaut mieux qu'on parte maintenant on prend le risque"
                         jump jour
                     "voyager de nuit":
-                        r "bon bah c'est autant se reposer ici jusqu'à la nuit il nous verront moins bien nuit tombé"
                         jump nuit
 
 

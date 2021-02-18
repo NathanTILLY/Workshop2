@@ -13,7 +13,7 @@ label rencontre:
 
     play sound "tumbleweed-sound-effect-hq.mp3"
 
-    show robot neutre at center
+    show robot triste at center
 
     r   "C'est l'heure... Je dois y..."
     r   "Retourner..."
@@ -28,7 +28,7 @@ label rencontre:
 
     "*Il sort l'enfant de la capsule.*"
 
-    show robot neutre at left
+    show robot gene at left
 
     show athenais triste at right
 
@@ -42,6 +42,8 @@ label rencontre:
     menu:
 
         "*Couper la connexion avec la centrale.*":
+
+            show robot neutre
 
             r   "Viens petite... Ca va... On va retrouver tes... Parents."
 
@@ -64,6 +66,8 @@ label rencontre:
             ath "Je veux rester avec toi... Ne me laisse pas..."
 
             "*Insupporté par le bruit de l'alerte, le robot décide de retirer sa puce.*"
+
+            show robot neutre
 
             r   "Viens petite... Ca va... On va retrouver tes... Parents."
 
@@ -99,13 +103,15 @@ label rencontre:
 
     show robotbad neutre at center
 
+    show robot peur
+
     show athenais peur
 
     m "Veuillez retourner à la centrale pour effectuer une maintenance et remettez nous l’enfant, premier avertissement."
 
     r   "Qu’allez vous... Faire de la petite... ?"
 
-    show robot neutre at right
+    show robot colere at right
 
     show athenais peur at right behind robot
 
@@ -131,13 +137,15 @@ label rencontre:
 
             show robotbad colere2
 
+            show robotbad2 colere1
+
             m   "HALTE ! A toutes les unités disponibles, le F4 est en fuite, il a un humain avec lui !"
 
-            "*Commence à courir après F4 et Athénaïs.*"
+            "*L'officier Commence à courir après F4 et Athénaïs.*"
 
             r   "Vite... cours... Athénaïs..."
 
-            "*Athénaïs court de mieux possible, mais commence à être essoufflée.*"
+            "*Athénaïs court du mieux possible, mais commence à être essoufflée.*"
 
             jump cachette
 
@@ -152,7 +160,7 @@ label cachette:
 
     hide robotbad2
 
-    show robot at left
+    show robot peur at left
 
     r   "Cache toi... ici..."
 
@@ -166,19 +174,23 @@ label cachette:
 
     r    "Ca... va... petite ?"
 
-    show athenais neutre
+    show athenais neutre at right
 
     a   "Oui, merci de m'avoir aidée."
+
+    show robot colere
 
     r   "Méfie-toi... Ils sont encore proches."
 
     show bg porte
 
+    show robot neutre
+
     r   "Il... faut... qu’on passe... cette porte..."
 
     a   "Qu’est-ce qu’il y a derrière cette porte ?"
 
-    r   "Je…je ne… sais pas… C’est notre seule… issue."
+    r   "Je... Je ne... Sais pas... C’est notre seule... issue."
 
     $ timeout_label= None
 
@@ -204,164 +216,268 @@ label cachette:
 
             "*Les P6-4D lancent une alarme qui alerte les S1 à proximité.*"
 
+            hide douane
+
+            hide douane2
+
+            jump suiteVerte
+
 
         "*Mentir aux douaniers.*":
+
+            show douane neutre at left
+
+            show douane2 neutre at right
+
+            show robot gene:
+                xalign 0.4
+                yalign 1.0
+
+            show athenais peur:
+                xalign 0.6
+                yalign 1.0
 
             p   "Veuillez vous identifier."
 
             r   "Je suis l’unité F4... Numéro 112... de la brigade des récupérateurs..."
 
-            p   "Que faites vous ici ?”"
+            p   "Que faites vous ici ?"
+
+            $ chanceDePasser = 50
+
+            menu:
+
+                "\"Je... dois... passer.\"":
+
+                    $ chanceDePasser = chanceDePasser - 10
+
+                "\"La centrale... m'a... demandé d'amener... cette chose... hors de la... décharge.\"":
+
+                    $ chanceDePasser = chanceDePasser + 10
+
+            p   "Hum, très bien et où amenez vous cette chose ?"
+
+            "*Il pointe l'enfant du doigt.*"
+
+            menu:
+
+                "\"La centrale… m’a… demandé de l'exécuter... à l’extérieur... de la décharge\"":
+
+                    $ chanceDePasser = chanceDePasser - 20
+
+                "\"Vous... n’avez pas... besoin de le... savoir\"":
+
+                    $ chanceDePasser = chanceDePasser + 30
+
+            a   "Ils me font peur..."
+
+            "*Athénaïs pointe les douaniers du doigt.*"
+
+            p   "OH ! La chose parle ! Qu’est ce que c’est que ce truc ?"
+
+            menu:
+
+                "\"Notre pire... cauchemar... c’est pour... cela que... je dois l’éliminer...\"":
+
+                    $ chanceDePasser = chanceDePasser + 20
+
+                "\"C’est un... enfant, je... dois l’éliminer...\"":
+
+                    $ chanceDePasser = chanceDePasser - 50
+
+            hide robot
+
+            hide athenais
+
+            "*L’un des douaniers reçoit un appel.*"
+
+            "\"A toutes les unités, une unité F4 et un enfant sont en fuite.\""
+
+            if (chanceDePasser >= 50):
+
+                p   "Je crois qu'on les a laissés partir..."
+
+                p   "On prévient la centrale ?"
+
+                p   "On risque pas de se faire engueuler ?"
+
+                p   "Oups..."
+
+                jump suiteBleue
+
+            else:
+
+                show douane colere
+
+                show douane2 colere
+
+                p "Veuillez patienter quelques instants, nous allons procéder à des vérifications supplémentaires."
+
+                show robot gene:
+                    xalign 0.4
+                    yalign 1.0
+
+                show athenais peur:
+                    xalign 0.6
+                    yalign 1.0
+
+                "*L’un des P6 appelle discrètement une unité de S1.*"
+
+                "*Après quelques minutes, une patrouille de S1 arrive à la porte.*"
+
+                "*F4 les repère et commence à courir avec Athénaïs.*"
+
+                jump suiteVerte
+
+        "*Dire la vérité aux douaniers.*":
+
+            show douane neutre at left
+
+            show douane2 neutre at right
+
+            show robot neutre:
+                xalign 0.4
+                yalign 1.0
+
+            show athenais neutre:
+                xalign 0.6
+                yalign 1.0
+
+            $ chanceDePasser = 50
+
+            p   "Veuillez vous identifier."
+
+            r   "Je suis l’unité F4... Numéro 112... De la brigade des récupérateurs..."
+
+            p   "Que faites-vous ici ?"
+
+            menu:
+
+                "\"Je... dois ramener... cette enfant... chez elle...\"":
+
+                    $ chanceDePasser = chanceDePasser + 10
+
+                "\"Je... dois passer... avec l’enfant...\"":
+
+                    $ chanceDePasser = chanceDePasser - 10
+
+            p   "Hum, très bien et où amenez vous cette chose ?"
+
+            "*Il pointe l'enfant du doigt.*"
+
+            menu:
+
+                "\"Je... la ramène à la... cité volante, pour... qu’elle retrouve... sa famille.\"":
+
+                    $ chanceDePasser = chanceDePasser + 30
+
+                "\"Je... dois la sortir... de la décharge.\"":
+
+                    $ chanceDePasser = chanceDePasser - 20
+
+            show athenais contente
+
+            a   "Il est mignon lui avec sa tête."
+
+            "*Elle pointe l’un des douaniers du doigt.*"
+
+            p   "OH ! Merci bien petite chose !"
+
+            p   "Mais qu'est-ce qu'un enfant ?"
+
+            show athenais neutre
+
+            menu:
+
+                "\"Un... humain, qui ne doit... pas être la.\"":
+
+                    $ chanceDePasser = chanceDePasser - 50
+
+                "\"Un humain... fragile, qui a besoin... de sa famille.\"":
+
+                    $ chanceDePasser = chanceDePasser + 30
+
+            hide robot
+
+            hide athenais
+
+            "*L’un des douaniers reçoit un appel.*"
+
+            "\"A toutes les unités, une unité F4 et un enfant sont en fuite.\""
+
+            if (chanceDePasser >= 50):
+
+                p   "Je crois qu'on les a laissés partir..."
+
+                p   "On prévient la centrale ?"
+
+                p   "On risque pas de se faire engueuler ?"
+
+                p   "Oups..."
+
+                jump suiteBleue
+
+            else:
+
+                p "Veuillez patienter quelques instants, nous allons procéder à des vérifications supplémentaires."
+
+                show robot gene:
+                    xalign 0.4
+                    yalign 1.0
+
+                show athenais peur:
+                    xalign 0.6
+                    yalign 1.0
+
+                "*L’un des P6 appelle discrètement une unité de S1.*"
+
+                "*Après quelques minutes, une patrouille de S1 arrive à la porte.*"
+
+                "*F4 les repère et commence à courir avec Athénaïs.*"
+
+                jump suiteVerte
+
+label suiteBleue:
+
+    hide douane
+
+    hide douane2
+
+    show robot neutre at left
+
+    show athenais neutre at right
+
+    "*F4 et Athénaïs, ont passé la porte sans problème.*"
+
+    "*Les gardes ne les retrouveront pas avant un certain temps.*"
+
+    "*Après avoir passé la porte, F4 et Athénaïs arrivent dans l’ancienne ville humaine dans laquelle la nature a repris ses droits.*"
+
+    jump avecbras
 
 
 
 
+label suiteVerte:
 
+    hide douane
 
+    hide douane2
 
+    show robot neutre at left
 
+    show athenais neutre at right
 
-$"""
-____________________________________________________________________________________________________
-        r "Bon allez vient on va se balader"
-        show athenais at right
-        show robot normal at right
-        show robotbad at center
-        r "Oh fuck un robot soldat"
-        m "Blood for the blood god"
-        menu:
-            c "Que faire ?"
-            "Fuire":
-                r "taille Athenais taille taille taille"
-                show athenais at left
-                show robot normal at left
-                m "Je vais vous fumer"
-                r "Ah fuck il nous as vu cache toi dans cette botte de paille Athenais"
-                show paille at left
-                m "?????"
-                m "Bah alors ils sont passé où"
-                hide robotbad
-                r "..."
-                r "Il à l'air d'être partit"
-                hide paille
-                r "Ok goh continuer de se balader"
-            "Se cacher":
-                r "Viens on va se cacher dans cette botte de paille Athenais"
-                show paille at right
-                m "MHHHH rien a voir ici"
-                hide robotbad
-                r "..."
-                r "Il à l'air d'être partit"
-                hide paille
-                r "Ok goh continuer de se balader"
-        n "Après quelques heures de marche Athenais et F4-112R arrive devant une porte garder par un robot douanier"
-        show bg porte
-        show athenais at left
-        show robot normal at left
-        show robotdoaunier at center
-        r "Salut mec tu nous laisse passer stp ?"
-        p "Que venez vous faire ici ?"
-        menu:
-            "Dire la vérité":
-                r "Je souhaite passer afin de ramener cette enfant chez elle"
-                a "..."
-                p"mhhh"
-                p"et d'où elle vient cette enfant ?"
-                menu:
-                    "de la cité des humains":
-                        r "Elle vient de chez les humains habitant au dessus"
-                        p "ouais ça fait du sens vous pouvez passer"
-                        jump avecbras
-                    "je l'ai trouvé":
-                        r "je l'ai trouvé dans une benne pas loin"
-                        p "..."
-                        p "tu te paie ma tronche gringo ???"
-                        p "A toutes les unités ici P6-4D en charge de la porte 45B renégat repéré envoyer des renforts"
-                        r "Oh la poucave vient Athenais on passe en force"
-                        p "tu ne va nul part !"
-                        hide bg porte
-                        hide athenais
-                        hide robot normal
-                        hide robotdoaunier
-                        show bg white
-                        with Dissolve(2)
-                        pause .5
-                        r "Argh"
-                        show bg porte
-                        show athenais at right
-                        show robot minusbras at right
-                        a "F4-112R ! Ton bras !"
-                        r "t'en occupe pas Athenais continue de courir"
-                        hide athenais
-                        hide robot minusbras
-                        show robotdoaunier at center
-                        p "..."
-                        p "A toutes les unités le renégat se dirige vers la cité des humains"
-                        jump sansbras
-            "Mentir":
-                r "Je souhaite passer afin de ramener cette enfant chez mon employeur"
-                a "..."
-                p "mhhh"
-                p "et c'est qui votre employeur ?"
-                menu:
-                    "réponse fun":
-                        r "J34n C45tuX"
-                        p "..."
-                        p "tu te paie ma tronche gringo ???"
-                        p "A toutes les unités ici P6-4D en charge de la porte 45B renégat repéré envoyer des renforts"
-                        r "Oh la poucave vient Athenais on passe en force"
-                        p "tu ne va nul part !"
-                        hide bg porte
-                        hide athenais
-                        hide robot normal
-                        hide robotdoaunier
-                        show bg white
-                        with Dissolve(2)
-                        pause .5
-                        r "Argh"
-                        show bg porte
-                        show athenais at right
-                        show robot minusbras at right
-                        a "F4-112R ! Ton bras !"
-                        r "t'en occupe pas Athenais continue de courir"
-                        hide athenais
-                        hide robot minusbras
-                        show robotdoaunier at center
-                        p "..."
-                        p "A toutes les unités le renégat se dirige vers la cité des humains"
-                        jump sansbras
-                    "réponse sérieuse":
-                        r "je vais livrer à C4B32 il a besoin de biocarburant pour un projet"
-                        p "ouais ça fait du sens vous pouvez passer"
-                        jump avecbras
-            "Passer en force":
-                r "Frérot t'a déjà entendu parler de l"
-                r "DERRIERE TOI !!!"
-                p "mmmmh?"
-                r "taille taille taille Athenais on trace !"
-                p "tu ne va nul part !"
-                hide bg porte
-                hide athenais
-                hide robot normal
-                hide robotdoaunier
-                show bg white
-                with Dissolve(2)
-                pause .5
-                r "Argh"
-                show bg porte
-                show athenais at right
-                show robot minusbras at right
-                a "F4-112R ! Ton bras !"
-                r "t'en occupe pas Athenais continue de courir"
-                hide athenais
-                hide robot minusbras
-                show robotdoaunier at center
-                p "..."
-                p "A toutes les unités le renégat se dirige vers la cité des humains"
-                jump sansbras
-    """
+    "*Lors de leur fuite, F4 se fait tirer dessus.*"
 
+    show robot bras peur
 
+    show athenais peur
 
+    "*Blessé, F4 perd un bras dans sa course.*"
 
-return
+    "*Il commence alors à laisser une trace d'huile derrière lui, indiquant sa direction.*"
+
+    jump sansbras
+
+    #!!!!!!A PARTIR DE CE MOMENT LA, LES SPRITES DE F4 A UTILISER SERONT bras!!!!!!
