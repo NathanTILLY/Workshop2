@@ -256,6 +256,6 @@ label mortUno1:
 
     "*Pendant que les S1 et les D1 ayant accompli leur mission rentrent à la centrale avec l’enfant...*"
 
-    "BAD ENDING"
+    jump credit
 
     return

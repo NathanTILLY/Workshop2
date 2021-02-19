@@ -1,14 +1,29 @@
 label fauneFlore:
+
+    show bg ville2 jour
+
     if pasDeBras == True:
-        show robot normal at right
+        show robot bras neutre at right
     else:
-        show robot minusbras at right
-    show Athenais at right
+        show robot neutre at right
+    show athenais contente at left
 
 
-    a "Ouah ! C’est beau ! Je n’avais jamais vu ça avant. Il n’y avait presque pas d’arbres dans chez moi."
+    a "Ouah ! C’est beau ! Je n’avais jamais vu ça avant. Il n’y avait presque pas d’arbres chez moi."
+
+    if pasDeBras == True:
+        show robot bras joie
+    else:
+        show robot joie
 
     r "Il n’y en… avait pas… beaucoup… chez moi… non plus."
+
+    if pasDeBras == True:
+        show robot bras peur at right
+    else:
+        show robot peur at right
+
+    show athenais peur at right behind robot
 
     "*Athénaïs et F4 voient les hautes herbes bouger et entendent des bruissements. F4 se place devant Athénaïs pour la protéger au cas où quelque chose viendrait les attaquer.*"
 
@@ -18,6 +33,13 @@ label fauneFlore:
     "*Une créature sort des hautes herbes et F4 décide de l‘analyser.*"
 
     a "C’est quoi ça F4 ?"
+
+    if pasDeBras == True:
+        show robot bras neutre at left
+    else:
+        show robot neutre at left
+
+    show athenais neutre
 
     r "Une créature... inoffensive... dénommée cerf."
 

@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/sansbras.rpy", line 58: expected statement.
-    "Aller dans le refuge à droite":
-                                   ^
+File "game/credit.rpy", line 7: expected statement.
+    nvle hide
+         ^
 
 Ren'Py Version: Ren'Py 7.4.2.1292
-Thu Feb 18 17:50:23 2021
+Fri Feb 19 01:03:56 2021

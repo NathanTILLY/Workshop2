@@ -1,8 +1,8 @@
 label courir:
     if pasDeBras == True:
-        show robot normal at right
+        show robot bras neutre at right
     else:
-        show robot minusbras at right
+        show robot neutre at right
     show athenais at right
 
 

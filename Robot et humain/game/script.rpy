@@ -47,9 +47,18 @@ image bg porte = "bg_porte.png"
 
 image bg ville1 jour = "bg_ville1jour.png"
 
-image bg ville2 jour = "bg_ville2jour.png"
+image bg ville1 nuit = "bg_ville1nuit.png"
+
+image bg ville2 jour = "bg_ville2_jour.png"
+
+image bg ville2 nuit = "bg_ville2_nuit.png"
 
 image bg abri = "bg_abri.png"
+
+image bg bon abri = "bg_bon_abri.png"
+
+image bg cable = "bg_cable.png"
+
 
 image athenais neutre = "athenais_neutre.png"
 
@@ -82,6 +91,10 @@ image douane2 colere = "douane_colere.png"
 image drone neutre = "drone_neutre.png"
 
 image drone colere = "drone_colere.png"
+
+image ours repos = "ours_repos.png"
+
+image ours colere = "ours_colere.png"
 
 # SPRITES DE F4
 
@@ -121,7 +134,7 @@ image robot jambe gene = "F4_sansJambe_gene.png"
 
 image robot jambe joie = "F4_sansJambe_joie.png"
 
-image robot jambe neutre = "F4_sansBras_neutre.png"
+image robot jambe neutre = "F4_sansJambe_neutre.png"
 
 image robot jambe peur = "F4_sansJambe_peur.png"
 

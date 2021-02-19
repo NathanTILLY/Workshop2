@@ -25,7 +25,8 @@ label finUno:
 
     "F4 dans ses pensés : "
 
-    r "Je ne comprends pas, je crois que je suis en train de m’attacher à elle et que sa présence m’apaise et m’apporte de la joie. Mais qu’est ce que la joie ? Suis-je capable de ressentir des choses ? Est-ce une bonne idée de la ramener là haut ? Était-elle heureuse ? Est-ce qu’elle..."
+    r "Je ne comprends pas, je crois que je suis en train de m’attacher à elle et que sa présence m’apaise et m’apporte de la joie."
+    r "Mais qu’est ce que la joie ? Suis-je capable de ressentir des choses ? Est-ce une bonne idée de la ramener là haut ? Était-elle heureuse ? Est-ce qu’elle..."
 
     a "F4 ça va ? Tu as l’air perdu"
 
@@ -45,15 +46,21 @@ label finUno:
     r "Pourtant j’ai l’impression de l’aimer comme un père, j’ai envie de la protéger, de la réconforter, de la chérir et je n'ai pas envie de la perdre. C’est peut-être ça l’amour ?"
 
     "*F4 et Athénaïs se rapprochent de plus en plus du câble si bien que maintenant il parait immense* "
-
+    scene bg cable
+    with Dissolve(.5)
+    show athenais neutre at left behind robot
+    show robot neutre:
+        xalign 0.3
+        yalign 1.0
     "*Après un certain temps de marche, ils arrivent enfin au câble, de peur Athénaïs se colle contre F4.*"
-
+    show athenais triste at center
     a "J’ai peur d’y retourner, je peux rester avec toi s’il te plaît F4 ?"
 
     "F4 dans sa tête :"
 
-    r "Que dois-je répondre à ça ? Que dois-je faire ? Dois-je vraiment imposer mon choix ? Suis-je légitime à la garder ? Pourrais-je la protéger des dangers d’un monde qui m'est inconnu ? Peut-être que ses parents veulent la retrouver ? Sera-t-elle vraiment heureuse avec moi ?"
-
+    r "Que dois-je répondre à ça ? Que dois-je faire ? Dois-je vraiment imposer mon choix ? Suis-je légitime à la garder ? "
+    r "Pourrais-je la protéger des dangers d’un monde qui m'est inconnu ? Peut-être que ses parents veulent la retrouver ? Sera-t-elle vraiment heureuse avec moi ?"
+    show athenais neutre at center behind robot
     a "F4, tu fumes !"
 
     r "Comment… ça ?"
@@ -67,15 +74,21 @@ label finUno:
         "Je veux rester avec toi":
             label finFuite:
                 play music "les_autres_fins.mp3"
+                show robot joie at left
                 r "Je ne veux… pas… t’abandonner, je… veux… rester avec toi"
+                show athenais contente at center
+                "Le visage de la fillette s’illumina de bonheur et de soulagement, elle était tellement heureuse d’avoir retrouvé une famille… Athénaïs se rue sur F4 pour l’enlacer."
+                "Des larmes se mettent à couler sur son visage, non pas de tristesse mais de soulagement et de joie.*"
 
-                "*Le visage de la fillette s’illumina de bonheur et de soulagement, elle était tellement heureuse d’avoir retrouvé une famille… Athénaïs se rue sur F4 pour l’enlacer. Des larmes se mettent à couler sur son visage, non pas de tristesse mais de soulagement et de joie.*"
+                "Après ce câlin riche en émotion F4 prit la main d’Athénaïs et ils continuèrent leur route en s'enfonçant plus loin dans la forêt."
 
-                "*Après ce câlin riche en émotion F4 prit la main d’Athénaïs et ils continuèrent leur route en s'enfonçant plus loin dans la forêt.*"
+                "*Ce fut la fin d’un chapitre de leur histoire, et le début d’un nouveau..."
+                jump credit
 
-                "*Ce fut la fin d’un chapitre de leur histoire, et le début d’un nouveau...*"
 
 
         "Tu dois retourner auprès de tes parents":
 
+            $ posture = False
+            $ jambe = False
             jump finRamene

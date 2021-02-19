@@ -294,11 +294,13 @@ label cachette:
 
             hide athenais
 
-            "*L’un des douaniers reçoit un appel.*"
-
-            "\"A toutes les unités, une unité F4 et un enfant sont en fuite.\""
 
             if (chanceDePasser >= 50):
+                p   "Vous êtes en règle, vous pouvez passer"
+
+                "*L’un des douaniers reçoit un appel.*"
+
+                "\"A toutes les unités, une unité F4 et un enfant sont en fuite.\""
 
                 p   "Je crois qu'on les a laissés partir..."
 
@@ -406,11 +408,12 @@ label cachette:
 
             hide athenais
 
-            "*L’un des douaniers reçoit un appel.*"
-
-            "\"A toutes les unités, une unité F4 et un enfant sont en fuite.\""
-
             if (chanceDePasser >= 50):
+                p   "Vous êtes en règle, vous pouvez passer"
+
+                "*L’un des douaniers reçoit un appel.*"
+
+                "\"A toutes les unités, une unité F4 et un enfant sont en fuite.\""
 
                 p   "Je crois qu'on les a laissés partir..."
 
