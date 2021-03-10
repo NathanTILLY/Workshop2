@@ -69,5 +69,6 @@ label soldat:
 
             "*F4 attend que les S1 passent avant de reprendre la route*"
             hide robotbad
+            hide robotbad2
             $ posture = False
             jump enfantAttaque
